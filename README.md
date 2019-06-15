@@ -6,7 +6,7 @@ This repository contains scripts that can be used to customize the [Scratch 3.0]
 
 Makes Scratch 3.0 more similar to Scratch 2.0. Currently in beta.
 
-[Click to install](https://github.com/mxmou/customize-scratch/raw/master/scratch2Theme.js)
+[Click to install](https://github.com/mxmou/customize-scratch/raw/master/scratch2Theme.user.js)
 
 ## Credits
 
