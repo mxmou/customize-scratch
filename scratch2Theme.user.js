@@ -155,7 +155,7 @@
     );
     // Text inputs
     GM_addStyle(
-        "input[type=text], input:not([type]) {" +
+        "input[type=text]:not(.input), input:not([type]):not(.input) {" +
         "box-shadow: 1px 1px 1px 0px inset #828486!important; " +
         "background-color: white!important; " +
         "border-width: 1px!important; border-style: solid!important; outline: none!important; " +
