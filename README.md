@@ -10,4 +10,4 @@ Makes Scratch 3.0 more similar to Scratch 2.0. Currently in beta.
 
 ## Credits
 
-Thanks to [https://github.com/infinitytec/I-Cant-Believe-Its-Not-2] for inspiration.
+Thanks to https://github.com/infinitytec/I-Cant-Believe-Its-Not-2 for inspiration.
