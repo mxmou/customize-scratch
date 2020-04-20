@@ -54,6 +54,7 @@
         border-radius: 4px
         border: none
         background: primary
+        font-weight: bold
         cursor: pointer
     .button.dropdown.open
     .button.small.dropdown.open
@@ -65,7 +66,6 @@
         text-shadow: none
         background: white
         color: primary
-        font-weight: bold
         border: 1px solid primary
     .button.grey:hover, button.grey:hover
         color: active
