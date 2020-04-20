@@ -1,0 +1,275 @@
+/* ==UserStyle==
+@name           Scratchr2
+@namespace      github.com/mxmou
+@version        1.0.0
+@description    Makes the Scratchr2 site look more like Scratch 3.0
+@author         Maximouse (https://scratch.mit.edu/users/Maximouse)
+@homepageURL    https://github.com/mxmou/customize-scratch
+@supportURL     https://github.com/mxmou/customize-scratch/issues
+@license        CC-BY-SA-4.0
+@var            color text    "Text color"      #575e75
+@var            color primary "Primary color"   #4d97ff
+@var            color active  "Highlight color" #4280d7
+@var            color bg      "Background"      #fcfcfc
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/")
+    html
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    body
+        background: bg
+        color: text
+    h1, h2, h3, h4
+        color: inherit
+    a, input.link
+        color: primary
+        font-weight: bold
+    a:hover
+    a:active
+    a.black:hover
+    a.black:active
+    input.link:hover
+    input.link:active
+    input.link.black:hover
+    input.link.black:active
+        color: active
+        text-decoration: none
+    #content
+        padding-top: 70px
+    .container
+        width: 942px
+    textarea
+        box-shadow: none
+        border-radius: 8px
+        border: 2px solid rgba(0, 0, 0, 0.2)
+        resize: none
+    input:focus
+        box-shadow: 0 0 0 4px rgba(77, 151, 255, 0.25)
+    textarea:focus
+        border: 2px solid primary!important
+        box-shadow: 0 0 0 4px rgba(77, 151, 255, 0.25)
+    .button, button, .button:hover, button:hover
+        border-radius: 4px
+        border: none
+        background: primary
+        cursor: pointer
+    .button.dropdown.open
+    .button.small.dropdown.open
+    button.dropdown.open
+    button.small.dropdown.open
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+    .button.grey, button.grey, .button.grey:hover, button.grey:hover
+        text-shadow: none
+        background: white
+        color: primary
+        border: 1px solid primary
+    .button.grey:hover, button.grey:hover
+        color: active
+        border-color: active
+    .button.small, button.smal
+        border-radius: 3px
+    .dropdown span.dropdown-toggle:not(.black) span.caret
+        width: 20px
+        height: 20px
+        margin-left: 8px
+        border: none
+        background: url(/images/dropdown.png) no-repeat center center
+        background-size: 50%
+        opacity: 1
+    .box
+        background: #f2f2f2
+        border-color: #d9d9d9
+        box-shadow: none
+    .box .box-content
+        border-color: #d9d9d9
+    .slider-carousel .thumb span.owner a
+        color: primary
+    #comments .comments li
+        border-color: #d9d9d9
+    #comments .comment .info .name a:hover
+        color: primary
+    #comments .comment .info .time
+        color: #b3b3b3
+    .dropdown .dropdown-menu
+        color: text
+        font-weight: normal
+        top: 24px
+        left: -1px
+        border: 1px solid primary
+        box-shadow: none
+    #footer
+        background-color: #f2f2f2
+        box-shadow: none
+    #footer a
+        font-weight: normal
+    #footer ul.footer-col li h4
+        color: text
+    .controls.tooltip input:focus
+    .control-group.tooltip input:focus
+    .controls.tooltip textarea:focus
+    .controls.tooltip .tooltip-target:focus
+    .control-group.tooltip textarea:focus
+    .control-group.tooltip .tooltip-target:focus
+    .controls.tooltip.force input
+    .control-group.tooltip.force input
+    .controls.tooltip.force textarea
+    .controls.tooltip.force .tooltip-target
+    .control-group.tooltip.force textarea
+    .control-group.tooltip.force .tooltip-target
+        box-shadow: 0 0 0 4px rgba(77, 151, 255, 0.25)
+    #topnav
+        height: 50px
+    #topnav .innerwrap
+        background: primary
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.25)
+        height: 50px
+    #topnav .logo
+        margin-right: 6px
+    #topnav .logo span
+        background: url(/images/logo_sm.png) no-repeat center center
+        background-size: 95%
+        width: 81px
+        height: 50px
+        transition: all 0.15s ease
+    #topnav .logo:hover span
+        background-image: url(/images/logo_sm.png)
+        background-size: 100%
+    #topnav ul.site-nav
+        height: 50px
+    #topnav ul.site-nav li
+    #topnav ul.site-nav li.last
+        border: none
+        line-height: 50px
+    #topnav ul.site-nav li:hover
+        background: rgba(0, 0, 0, 0.1)
+    #topnav ul.site-nav li a
+        font-size: 13.6px
+    #topnav form.search
+        margin: 0 20px
+    #topnav form.search .glass
+        background: url(/images/nav-search-glass.png) no-repeat center center
+        background-size: 14px 14px
+        width: 40px
+        height: 40px
+        border-right: none
+        outline: none
+        padding: 0
+        margin-top: 5px
+        opacity: 1
+        cursor: pointer
+        box-shadow: none
+    #topnav form.search input[type=text]
+        width: calc(100% - 50px)
+        height: 40px
+        margin-top: 5px
+        padding: 0 10px 0 40px
+        border-radius: 5px
+        font-family: inherit
+        font-size: 13.6px
+        color: white
+        background: rgba(0, 0, 0, 0.1)
+        box-shadow: none
+        transition: background-color 0.15s ease
+    #topnav form.search input[type=text]:focus
+        background-color: rgba(0, 0, 0, 0.2)
+    #topnav form.search input[type=text]::placeholder
+        color: rgba(255, 255, 255, 0.75)
+    #topnav ul.account-nav
+        margin-left: 0
+    #topnav ul.account-nav li
+    #topnav ul.account-nav li.join-scratch
+    #topnav ul.account-nav li:last-child
+        border: none
+    #topnav ul.account-nav .sign-in .popover
+        background-color: primary
+    #topnav ul.account-nav .sign-in .popover .arrow::after
+        border-bottom-color: primary
+    #topnav ul.account-nav.logged-in > li
+        border-left: none
+        line-height: inherit
+    #topnav ul.account-nav.logged-in > li:hover
+        background-color: rgba(0, 0, 0, 0.1)
+    #topnav ul.account-nav .my-stuff .mystuff-icon
+        background-image: url(/images/mystuff.png)
+        background-size: 45%
+        width: 30px
+        height: 33px
+        padding: 13px 10px 4px 10px
+    #topnav ul.account-nav .messages .messages-icon
+        background-image: url(/images/nav-notifications.png)
+        background-size: 45%
+        width: 30px
+        height: 33px
+        padding: 13px 10px 4px 10px
+        position: relative
+    #topnav ul.account-nav .logged-in-user
+        height: 50px
+    #topnav ul.account-nav .logged-in-user .user-icon
+        border: none
+        border-radius: 3px
+        margin-right: 10px
+        margin-top: 0
+    #topnav ul.account-nav .logged-in-user .dropdown-toggle
+        padding: 14px 15px 4px 15px
+        height: 33px
+        font-size: 13px
+        line-height: 24px
+    #topnav ul.account-nav .logged-in-user .dropdown-menu
+        background-color: primary
+        margin-top: 0
+        top: 50px
+        padding-top: 5px
+        border-radius: 0 0 5px 5px
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        min-width: 140px
+        box-sizing: border-box
+        background-clip: border-box
+        width: 100%
+        font-weight: bold
+        box-shadow: none
+    #topnav ul.account-nav ul.user-nav
+        margin: 0
+    #topnav ul.account-nav .logged-in-user.dropdown.open
+        background-color: rgba(0, 0, 0, 0.1) !important
+    #topnav ul.account-nav ul.user-nav li
+        margin: 0.75em 0
+    #topnav ul.account-nav ul.user-nav li:hover
+        background: rgba(0, 0, 0, 0.1)
+    #topnav ul.account-nav ul.user-nav li.logout.divider
+        border-radius: 0
+        border-top-color: rgba(0, 0, 0, 0.1)
+        padding: 0
+    #topnav li.logout.divider input
+    #topnav li.logout.divider input:hover
+        border-radius: 0
+        background-color: transparent
+        padding-left: 10px
+        font-weight: inherit
+        cursor: pointer
+    .banner
+        top: 50px
+
+    /* Profile page */
+    #profile-box .doing
+        background: #f2f2f2
+
+    /* Forums */
+    .blockpost div.box
+        background-color: primary
+    .blockpost .box-head a:hover
+        text-decoration: underline
+    .postleft, .postfootleft
+        background-color: #f2f2f2
+    .postright, .postfootright
+        border-left-color: #f2f2f2
+
+@-moz-document url("https://scratch.mit.edu/mystuff/")
+    /* My Stuff */
+    #main-content
+        border-top: 0
+    .box .box-content .action-bar .inner
+        border-top: 0
+        background-color: #f2f2f2
