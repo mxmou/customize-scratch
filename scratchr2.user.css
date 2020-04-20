@@ -64,6 +64,7 @@
         text-shadow: none
         background: white
         color: primary
+        font-weight: bold
         border: 1px solid primary
     .button.grey:hover, button.grey:hover
         color: active
