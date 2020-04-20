@@ -261,6 +261,8 @@
     /* Forums */
     .blockpost div.box
         background-color: primary
+    .blockpost .block-head
+        border-top-color: primary
     .blockpost .box-head a:hover
         text-decoration: underline
     .postleft, .postfootleft
