@@ -60,6 +60,8 @@
         border: none
         background: primary
         font-weight: bold
+        color: white
+        text-shadow: none
         cursor: pointer
     .button.dropdown.open
     .button.small.dropdown.open
@@ -68,7 +70,6 @@
         border-bottom-left-radius: 0
         border-bottom-right-radius: 0
     .button.grey, button.grey, .button.grey:hover, button.grey:hover
-        text-shadow: none
         background: white
         color: primary
         border: 1px solid primary
