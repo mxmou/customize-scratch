@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.0.5
+@version        1.0.6
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -213,6 +213,9 @@
         height: 33px
         padding: 13px 10px 4px 10px
         position: relative
+    #topnav ul.account-nav .my-stuff .mystuff-icon:hover
+    #topnav ul.account-nav .messages .messages-icon:hover
+        background-size: 50%
     #topnav ul.account-nav .messages .notificationsCount
         margin-top: 4px
         right: 4px
