@@ -1,26 +1,61 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.0.6
+@version        1.1.0
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
 @supportURL     https://github.com/mxmou/customize-scratch/issues
 @updateURL      https://raw.githubusercontent.com/mxmou/customize-scratch/master/scratchr2.user.css
 @license        MIT
-@var            color text    "Text color"      #575e75
-@var            color primary "Primary color"   #4d97ff
-@var            color active  "Highlight color" #4280d7
-@var            color bg      "Background"      #fcfcfc
+@var            color text    "Text color"                   #575e75
+@var            color primary "Primary color"                #4d97ff
+@var            color active  "Highlight color"              #4280d7
+@var            color bg      "Page background"              #fcfcfc
+@var            color boxbg   "Box background"               #ffffff
+@var            color boxhead "Box header/footer background" #f2f2f2
 @preprocessor   stylus
 ==/UserStyle== */
+
+@-moz-document regexp("https://scratch.mit.edu/.*")
+    /* Customized colors for 3.0-styled pages */
+    body
+    h1, h2, h3, h4, h5
+    p, .news li p
+    .outer .sort-mode .select select
+    .grid .thumbnail .thumbnail-info .thumbnail-title .thumbnail-creator a
+    .thumbnail-column .thumbnail .thumbnail-info .thumbnail-title .thumbnail-creator a
+    #footer, #donor
+        color: text
+    #view
+    .outer #projectBox
+    .tips-getting-started, .tips-activity-guides
+        background: bg
+    #navigation, #navigation .dropdown
+        background: primary
+    a:link, a:visited, a:active, .news li h4
+        color: primary
+    a:hover, .news li:hover h4
+        color: active
+    .box .box-header, .gray-area, #footer, #donor
+        background: boxhead
+    .box, .box .box-content
+    .grid .thumbnail
+    .ttt-tile
+    .about .body
+    .messages-social-list
+    .comment-text
+    .comment .comment-body .comment-bubble
+    .comment .comment-body .comment-bubble::before
+        background: boxbg
 
 @-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/")
     html
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-    body
+    body, #pagewrapper
         background: bg
         color: text
+        text-shadow: none
     h1, h2, h3, h4
         color: inherit
     a, input.link
@@ -87,10 +122,11 @@
         background-size: 50%
         opacity: 1
     .box
-        background: #f2f2f2
+        background: boxhead
         border-color: #d9d9d9
         box-shadow: none
     .box .box-content
+        background: boxbg
         border-color: #d9d9d9
     .slider-carousel .thumb span.owner a
         color: primary
@@ -108,7 +144,7 @@
         border: 1px solid primary
         box-shadow: none
     #footer
-        background-color: #f2f2f2
+        background-color: boxhead
         box-shadow: none
     #footer a
         font-weight: normal
@@ -274,7 +310,7 @@
 
     /* Profile page */
     #profile-box .doing
-        background: #f2f2f2
+        background: boxhead
 
 @-moz-document regexp("https://scratch.mit.edu/discuss/.*")
     /* Forums */
@@ -301,7 +337,6 @@
         padding: 5px 0
         margin-bottom: 16px
         color: white
-        text-shadow: none
         font-size: 40px
         line-height: 1.7em
     #brdmenu
@@ -336,11 +371,11 @@
     .blockpost .box-head a:hover
         text-decoration: underline
     .postleft, .postfootleft
-        background-color: #f2f2f2
+        background-color: boxhead
     .postright, .postfootright
-        border-left-color: #f2f2f2
+        border-left-color: boxhead
     .djangobb th, .tc2, .tc3
-        background: #f2f2f2
+        background: boxhead
     .topic_isread a
         font-weight: normal
 
@@ -350,4 +385,4 @@
         border-top: 0
     .box .box-content .action-bar .inner
         border-top: 0
-        background-color: #f2f2f2
+        background-color: boxhead
