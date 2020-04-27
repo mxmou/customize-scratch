@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.1.0
+@version        1.2.0
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -33,7 +33,7 @@
         background: bg
     #navigation, #navigation .dropdown
         background: primary
-    a:link, a:visited, a:active, .news li h4
+    a, .news li h4
         color: primary
     a:hover, .news li:hover h4
         color: active
@@ -91,6 +91,7 @@
     button:hover
     .button.grey
     button.grey
+    .button[data-control=load-more]:hover
         border-radius: 4px
         border: none
         background: primary
@@ -104,11 +105,14 @@
     button.small.dropdown.open
         border-bottom-left-radius: 0
         border-bottom-right-radius: 0
-    .button.grey, button.grey, .button.grey:hover, button.grey:hover
+    .button.grey:not([data-control=load-more])
+    button.grey
+    .button.grey:not([data-control=load-more]):hover
+    button.grey:hover
         background: white
         color: primary
         border: 1px solid primary
-    .button.grey:hover, button.grey:hover
+    .button.grey:not([data-control=load-more]):hover, button.grey:hover
         color: active
         border-color: active
     .button.small, button.smal
@@ -165,12 +169,14 @@
         box-shadow: 0 0 0 4px rgba(77, 151, 255, 0.25)
     #topnav
         height: 50px
+        box-shadow: none
     #topnav .innerwrap
         background: primary
         border-bottom: 1px solid rgba(0, 0, 0, 0.1)
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.25)
         height: 50px
     #topnav .logo
+        height: 50px
         margin-right: 6px
     #topnav .logo span
         background: url(/images/logo_sm.png) no-repeat center center
@@ -190,9 +196,14 @@
     #topnav ul.site-nav li:hover
         background: rgba(0, 0, 0, 0.1)
     #topnav ul.site-nav li a
+        height: 33px
+        padding: 13px 15px 4px 15px
         font-size: 13.6px
+        line-height: 24px
     #topnav form.search
         margin: 0 20px
+    #topnav form.search input
+        margin-bottom: 0
     #topnav form.search .glass
         background: url(/images/nav-search-glass.png) no-repeat center center
         background-size: 14px 14px
@@ -223,6 +234,7 @@
         color: rgba(255, 255, 255, 0.75)
     #topnav ul.account-nav
         margin-left: 0
+        margin-bottom: 0
     #topnav ul.account-nav li
     #topnav ul.account-nav li.join-scratch
     #topnav ul.account-nav li:last-child
@@ -318,9 +330,16 @@
         width: 100%
         min-width: 942px
         padding-top: 50px
-    .linkst, .linksb, .blocktable, .blockpost, #reply
+    .linkst, .linksb
+    .blocktable
+    .blockpost
+    .block /* The "notice" at the pot */
+    #reply
+    .djangobb > .box:not(#brdheader):not(#brdfooter) /* The "edit post" box */
         width: 942px
         margin: auto
+    #messages
+        margin-bottom: 40px
     #brdheader
         margin-bottom: 40px
         padding-top: 20px
@@ -381,8 +400,112 @@
 
 @-moz-document url("https://scratch.mit.edu/mystuff/")
     /* My Stuff */
-    #main-content
-        border-top: 0
+    #content
+        padding-top: 50px
+        width: 100%
+        min-width: 942px
+    #content > .cols
+        width: 100%
+        margin: 0
+        position: relative
+    #content > .cols > *
+        width: 100%
+        margin: 0
+    #content > .cols > .col-4
+        position: absolute
+        top: 164px
+        z-index: 1
+    .v-tabs
+        margin: 0
+        margin-right: 0 !important
+        border-radius: 0
+        width: 100%
+        border: none
+        background: white
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.25)
+    .v-tabs ul
+        display: flex
+        justify-content: center
+    .v-tabs li.first
+        border-radius: 0
+    .v-tabs li
+        border: none
+    .v-tabs li a
+        color: text
+    .v-tabs li.active, .v-tabs li.active:hover
+        border-bottom: 3px solid #0fbd8c
+        background: transparent
+    .v-tabs li.active a
+        color: text
+        text-shadow: none
+    .v-tabs li:hover
+        border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+        background: transparent
+    .v-tabs li:hover a
+        color: text
+    #sidebar li.sub-list a
+        margin-left: 0
+    .box-content#main-content
+        padding-top: 42px
+        background: bg
+    .box
+        position: relative
+    #content > .cols > .col-12 > .box, .box .box-head
+        border-radius: 0
+        border: none
+        background: primary
+    .box .box-head
+        width: 942px
+        margin: auto
+        padding: 20px 0
+    .box .box-head h2
+        padding: 5px 0
+        color: white
+        font-size: 40px
+        line-height: 1.7em
+    .box .box-head .buttons
+        position: static
+        margin-top: 20px
+    .box .box-content
+        position: static
+    .action-bar
+        position: absolute
+        top: 20px
+        right: calc((100vw - 942px) / 2)
     .box .box-content .action-bar .inner
-        border-top: 0
-        background-color: boxhead
+        padding: 0
+        border: none
+        background: transparent
+    .action-bar .inner .dropdown
+    .action-bar .inner .dropdown:hover
+        height: 46px
+        border-color: rgba(0, 0, 0, 0.1)
+        background-color: #fafafa
+        color: text
+        font-weight: normal
+    .action-bar .inner .dropdown .dropdown-toggle
+        display: block
+        height: 100%
+        margin: 0
+        padding: 0 16px
+        line-height: 46px
+    .action-bar .inner .dropdown .dropdown-menu
+        top: 44px
+        border-color: inherit
+        background-clip: border-box
+    .box .box-content .media-list
+        width: 942px
+        margin: auto
+    .media-list li
+        border: none
+    .media-list .media-item-content
+        margin-bottom: 14px
+        border-radius: 4px
+        background: boxbg
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
+    .button[data-control=load-more]
+        display: block
+        position: static !important
+        width: 942px
+        margin: auto
+        text-align: center
