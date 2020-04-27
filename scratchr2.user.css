@@ -276,7 +276,58 @@
     #profile-box .doing
         background: #f2f2f2
 
+@-moz-document regexp("https://scratch.mit.edu/discuss/.*")
     /* Forums */
+    #content
+        width: 100%
+        min-width: 942px
+        padding-top: 50px
+    .linkst, .linksb, .blocktable, .blockpost, #reply
+        width: 942px
+        margin: auto
+    #brdheader
+        margin-bottom: 40px
+        padding-top: 20px
+        padding-bottom: 8px
+        border: none
+        border-radius: 0
+        background: #0fbd8c
+    #brdheader .box-head
+        width: 942px
+        margin: auto
+        padding: 0
+        border: none
+    #brdheader .box-head h2
+        padding: 5px 0
+        margin-bottom: 16px
+        color: white
+        text-shadow: none
+        font-size: 40px
+        line-height: 1.7em
+    #brdmenu
+        width: 942px
+        margin: auto
+        padding: 0
+        border: none
+        background: transparent
+    #brdmenu a
+        color: white
+    #brdmenu a:hover
+        text-decoration: underline
+    #brdfooter
+        margin-top: 40px
+        margin-bottom: 0
+        border: none
+    #brdfooter .box-content
+        box-sizing: border-box
+        width: 942px
+        margin: auto
+        padding-top: 20px
+        padding-left: 4px
+        padding-right: 4px
+        background: transparent
+    #brdfooter .box-content .conr button
+        margin-right: 0
     .blockpost div.box
         background-color: primary
         border-top-color: primary
@@ -288,6 +339,8 @@
         background-color: #f2f2f2
     .postright, .postfootright
         border-left-color: #f2f2f2
+    .djangobb th, .tc2, .tc3
+        background: #f2f2f2
     .topic_isread a
         font-weight: normal
 
