@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.2.0
+@version        1.3.0
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -336,6 +336,7 @@
     .block /* The "notice" at the pot */
     #reply
     .djangobb > .box:not(#brdheader):not(#brdfooter) /* The "edit post" box */
+    .blockform /* Change your signature */
         width: 942px
         margin: auto
     #messages
@@ -509,3 +510,71 @@
         width: 942px
         margin: auto
         text-align: center
+
+@-moz-document url("https://scratch.mit.edu/accounts/settings/"), url("https://scratch.mit.edu/accounts/password_change/"), url("https://scratch.mit.edu/accounts/email_change/")
+    /* Account Settings */
+    #pagewrapper
+        position: relative
+    #content > .cols
+        position: static
+        padding-top: 40px
+    .box .box-head
+        position: absolute
+        top: 50px
+        left: 0
+        width: 100%
+        padding: 0
+        padding-top: 20px
+        padding-bottom: 8px
+        border-radius: 0
+        background: primary
+    .box .box-head h2
+        width: 942px
+        margin: auto
+        margin-bottom: 16px
+        padding: 5px 0
+        color: white
+        font-size: 40px
+        line-height: 1.7em
+    #content
+        padding-top: 173px
+    #content > .cols > .col-4
+        margin: 0
+        width: 30%
+        float: right
+    .v-tabs
+        margin: 0 !important
+        border-radius: 0
+        border: none
+        border-left: 1px solid #d9d9d9
+        background: transparent
+    .v-tabs ul
+        padding-top: 16px
+        padding-bottom: 16px
+        padding-left: 20px
+    .v-tabs li
+    .v-tabs li.active
+    .v-tabs li:hover
+    .v-tabs li.active:hover
+        margin: 12px 0
+        border: none
+        background: transparent
+        font-size: 16px
+        line-height: 24px
+    .v-tabs li a
+        padding: 0
+        color: primary
+    .v-tabs li:hover a
+        color: active
+    .v-tabs li.active a
+        color: text
+        text-shadow: none
+    #content > .cols > .col-12
+        margin: 0
+        width: 60%
+        float: left
+    #content > .cols > .col-12 .box
+    #main-content
+        padding: 0
+        border: none
+        background: transparent
