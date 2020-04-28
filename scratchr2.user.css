@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.3.0
+@version        1.3.1
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -381,8 +381,8 @@
         padding-left: 4px
         padding-right: 4px
         background: transparent
-    #brdfooter .box-content .conr button
-        margin-right: 0
+    #brdfooter .box-content button
+        margin: 0
     .blockpost div.box
         background-color: primary
         border-top-color: primary
@@ -398,6 +398,10 @@
         background: boxhead
     .topic_isread a
         font-weight: normal
+
+@-moz-document regexp("https://scratch.mit.edu/discuss/topic/.*")
+    #brdfooter .foot
+        margin-top: 40px
 
 @-moz-document url("https://scratch.mit.edu/mystuff/")
     /* My Stuff */
