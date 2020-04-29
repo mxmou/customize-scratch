@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.3.1
+@version        1.4.0
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -49,10 +49,12 @@
     .comment .comment-body .comment-bubble::before
         background: boxbg
 
-@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/")
+@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
     html
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-    body, #pagewrapper
+    body
+        margin: 0
+    html, body, #pagewrapper
         background: bg
         color: text
         text-shadow: none
@@ -61,6 +63,7 @@
     a, input.link
         color: primary
         font-weight: bold
+        text-decoration: none
     a:hover
     a:active
     a.black:hover
@@ -324,6 +327,38 @@
     #profile-box .doing
         background: boxhead
 
+    /* Error pages */
+    #page-403, #page-404, #page-500
+        border-radius: 0
+        border: none
+        background: transparent
+    #page-500
+        width: 100%
+        min-height: 100vh
+        background: #f8aa36
+        color: white
+    #page-404 .box-head, #page-500 .box-head
+        display: none
+    #page-403 .box-head
+        border: none
+        color: #f8aa36
+        text-align: center
+    #page-403 .box-content, #page-404 .box-content, #page-500 .box-content
+        border: none
+        background: transparent
+    #page-404 .box-header, #page-500 .box-header
+        background: transparent
+    #page-404 .box-header h1
+        color: #f8aa36
+    #page-500 .box-header h1
+    #page-500 p
+    #page-500 a
+        color: white
+    #page-500 a:hover
+        text-decoration: underline
+    #page-500 img:last-child
+        content: url("/images/logo_sm.png")
+
 @-moz-document regexp("https://scratch.mit.edu/discuss/.*")
     /* Forums */
     #content
@@ -582,3 +617,55 @@
         padding: 0
         border: none
         background: transparent
+
+@-moz-document url("https://download.scratch.mit.edu/scratch2download/")
+    html, body
+        margin: 0
+        background: bg
+        color: text
+    .box
+        width: 100%
+        border-radius: 0
+        box-shadow: none
+    .box .box-head
+        display: none
+    .box, .box .box-content
+        border: none
+        background: transparent
+    .box .box-header
+        background: primary
+    .box .box-header h2
+        width: 942px
+        margin: auto
+        padding-top: 25px
+        padding-bottom: 29px
+        color: white
+        font-size: 40px
+        line-height: 1.7em
+    .box .box-content > :not(.box-header)
+        width: 942px
+        margin-left: auto
+        margin-right: auto
+    .lg-msg::before
+        content: "Scratch 2.0 is outdated. The current version of Scratch, 3.0, can be downloaded from https://scratch.mit.edu/download."
+        display: block
+        margin-bottom: 20px
+        font-weight: bold
+    .columns
+        display: flex
+    .columns > *
+        flex-grow: 1
+        flex-basis: 0
+        margin: 7px
+        padding: 8px
+        border-radius: 4px
+        background: white
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
+    .columns h3
+        color: text
+    a
+        color: primary
+        font-weight: bold
+        text-decoration: none
+    a:hover
+        color: active
