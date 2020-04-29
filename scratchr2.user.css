@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.4.2
+@version        1.4.3
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -433,6 +433,9 @@
         background: boxhead
     .topic_isread a
         font-weight: normal
+    .djangobb > .postmsg /* Post preview */
+        box-sizing: border-box
+        padding: 8px
 
 @-moz-document regexp("https://scratch.mit.edu/discuss/topic/.*")
     #brdfooter .foot
