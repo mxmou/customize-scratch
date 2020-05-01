@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.4.3
+@version        1.4.4
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -102,6 +102,10 @@
         color: white
         text-shadow: none
         cursor: pointer
+    .button:not(.grey) a
+    .button:not(.grey) a:hover
+    .button:not(.grey) a:visited
+        color: white
     .button.dropdown.open
     .button.small.dropdown.open
     button.dropdown.open
