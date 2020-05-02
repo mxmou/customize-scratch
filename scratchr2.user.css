@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.5.1
+@version        1.5.2
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -679,15 +679,31 @@
     
 @-moz-document regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/users/.*")
     /* Comments */
-    #comments .content
+    #comments .comments li
+    #comments ul.comments ul li
+        /* Remove separators */
+        border: none
+    #comments .comment .info .content
         position: relative
         border: 1px solid #d9d9d9
-        border-radius: 0 5px 5px 5px
+        border-bottom: none
+        border-top-right-radius: 5px
         padding: 1rem
         margin-left: 1.5rem
+        margin-bottom: 0
         background-color: white
         max-width: 30.25rem
         overflow: visible !important
+    #comments .comment .info > div:not(.name):not(.content):not([data-content=reply-form])
+        max-width: 30.25rem
+        margin-left: 1.5rem
+        padding: 1rem
+        padding-top: 0
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+        border: 1px solid #d9d9d9
+        border-top: none
+        background-color: white
     #comments .content:after
         display: block
         position: absolute
