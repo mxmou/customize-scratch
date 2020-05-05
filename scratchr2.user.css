@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.6.0
+@version        1.7.0
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -61,6 +61,7 @@
     h1, h2, h3, h4
         color: inherit
     a, input.link
+    .ui-widget-content a
         color: primary
         font-weight: bold
         text-decoration: none
@@ -96,9 +97,12 @@
     .button.grey
     button.grey
     .button[data-control=load-more]:hover
+    .ui-widget button.ui-state-default
         border-radius: 4px
         border: none
         background: primary
+        box-shadow: none
+        font-family: inherit
         font-weight: bold
         color: white
         text-shadow: none
@@ -327,10 +331,65 @@
         cursor: pointer
     .banner
         top: 50px
-
-    /* Profile page */
-    #profile-box .doing
-        background: boxhead
+    .modal-backdrop
+    .modal-backdrop.fade.in
+    .ui-widget-overlay
+        background: primary
+        opacity: 0.7
+    .modal
+    .jqui-modal
+    .jqui-modal.ui-corner-all
+        padding: 0
+        border-radius: 16px
+        border: none
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.15)
+    .modal-header
+    .jqui-modal .ui-dialog-titlebar.ui-widget-header
+        padding-left: 16px
+        padding-top: 8px
+        padding-right: 8px
+        border-radius: 16px 16px 0 0
+        background: primary
+        box-shadow: inset 0 -1px 0 0 active
+        color: white
+    .modal .modal-header .close
+    .jqui-modal .ui-widget-header .ui-dialog-titlebar-close
+        width: 32px
+        height: 32px
+        margin-top: 0
+        border-radius: 16px
+        background: rgba(0, 0, 0, 0.2)
+        line-height: 32px
+        text-align: center
+        color: white
+        opacity: 1
+        text-shadow: none
+    .jqui-modal .ui-widget-header .ui-dialog-titlebar-close
+        top: 5px
+    .jqui-modal .ui-widget-header .ui-dialog-titlebar-close .ui-icon-closethick
+        background: url(/svgs/modal/close-x.svg) no-repeat 0 0
+    .modal-header label
+        color: white
+    .jqui-modal .ui-dialog-content
+        padding: 16px
+    .jqui-modal .ui-dialog-buttonpane
+        padding: 16px
+        padding-top: 0
+        margin-top: 0
+    #featured-project-modal .modal-body
+        background: rgba(77, 151, 255, 0.1)
+    #featured-project-modal .project.thumb
+        border: none
+        background: white
+    .modal-footer
+        border-radius: 0 0 16px 16px
+        border: none
+        background: transparent
+        text-align: right
+    .modal-footer .btn:not(.blue)
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        background: white
+        color: primary
 
     /* Error pages */
     #page-403, #page-404, #page-500
@@ -373,8 +432,8 @@
     .linkst, .linksb
     .blocktable
     .blockpost
-    .block /* The "notice" at the pot */
-    #reply
+    .block /* The "notice" at the top */
+    .djangobb #reply
     .djangobb > .box:not(#brdheader):not(#brdfooter) /* The "edit post" box */
     .blockform /* Change your signature */
         width: 942px
@@ -445,6 +504,93 @@
 @-moz-document regexp("https://scratch.mit.edu/discuss/topic/.*")
     #brdfooter .foot
         margin-top: 40px
+
+@-moz-document regexp("https://scratch.mit.edu/users/[^/]+/")
+    /* Profile page */
+    #content
+        width: 100%
+    #profile-data
+    #content > .slider-carousel-container
+        width: 942px
+        margin-left: auto
+        margin-right: auto
+    #profile-data
+    #profile-data .box-head
+    #profile-box
+    #profile-box .inner
+    #profile-box .doing
+    #profile-data .footer
+        border: none
+        background: transparent
+    #profile-data .box-head
+    #profile-data .footer
+        padding: 0
+    #profile-box .about
+        padding-left: 0
+    #profile-box .doing
+        padding-right: 0
+    .box .box-head .portrait
+        height: 64px
+        margin-right: 16px
+    .box .box-head .portrait img
+        width: 64px
+        height: 64px
+        border-radius: 5px
+        border: none
+    .box .box-head .header-text h2
+        font-size: 28px
+        font-weight: normal
+        line-height: normal
+    .header-text .profile-details
+        color: text
+    .header-text .profile-details .group
+        border-color: text
+    #profile-data .box-head .buttons
+        top: 0
+        right: 0
+    #profile-box .inner
+        padding-top: 16px !important
+    #bio-readonly
+    #status-readonly
+    #profile-box #bio textarea
+    #profile-box #status textarea
+        color: text
+    #profile-box .player
+        border-radius: 4px
+        border: none
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
+    /* Profile Comments */
+    #content > .box:not(#profile-data):not(.slider-carousel-container)
+        border-radius: 0
+        border: none
+        background: rgba(77, 151, 255, 0.1)
+        padding-top: 16px
+        padding-bottom: 16px
+        margin-bottom: 0
+    #content > .box:not(#profile-data):not(.slider-carousel-container) .box-head
+    #content > .box:not(#profile-data):not(.slider-carousel-container) .box-content
+        border: none
+        background: transparent
+        width: 942px
+        margin: auto
+    #content > .box:not(#profile-data):not(.slider-carousel-container) .box-head
+        padding: 16px 0
+    #content > .box:not(#profile-data):not(.slider-carousel-container) .box-head h4
+        font-size: 20px
+        line-height: 1.7em
+    #comments #comments-enabled-box
+        padding: 0
+        padding-bottom: 16px
+        border-bottom: none
+    #comments #comment-form
+        padding: 0
+        margin-bottom: 24px
+    #comments #comment-form textarea
+        height: 100px
+    #comments form .small-text
+        color: text
+    #comments .comment
+        margin-left: 0
 
 @-moz-document regexp("https://scratch.mit.edu/studios/.*")
     /* Studios */
@@ -809,6 +955,9 @@
     #comments ul.comments ul li
         /* Remove separators */
         border: none
+    #comments .comments .info
+    #comments .comments li ul li .comment .info
+        width: calc(100% - 55px)
     #comments .comment .info .content
         position: relative
         border: 1px solid #d9d9d9
@@ -818,10 +967,8 @@
         margin-left: 1.5rem
         margin-bottom: 0
         background-color: white
-        max-width: 30.25rem
         overflow: visible !important
     #comments .comment .info > div:not(.name):not(.content):not([data-content=reply-form])
-        max-width: 30.25rem
         margin-left: 1.5rem
         padding: 1rem
         padding-top: 0
