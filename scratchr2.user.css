@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.7.2
+@version        1.7.3
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
 @supportURL     https://github.com/mxmou/customize-scratch/issues
-@updateURL      https://raw.githubusercontent.com/mxmou/customize-scratch/master/scratchr2.user.css
+@updateURL      https://mxmou.github.io/customize-scratch/scratchr2.user.css
 @license        MIT
 @var            color text    "Text color"                   #575e75
 @var            color primary "Primary color"                #4d97ff
@@ -137,6 +137,23 @@
         background: url(/images/dropdown.png) no-repeat center center
         background-size: 50%
         opacity: 1
+    select
+        -webkit-appearance: none
+        -moz-appearance: none
+        padding-left: 16px
+        padding-right: 64px
+        height: 48px
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        transition: border-color 0.5s ease
+        background: #fafafa url(https://mxmou.github.io/customize-scratch/assets/caret.svg) no-repeat right center
+        color: text
+        font-size: 14px
+    select:hover
+    select:focus
+        background-image: url(https://mxmou.github.io/customize-scratch/assets/caret_hover.svg)
+    select:focus
+        border-color: primary
+        outline: none
     .box
         background: boxhead
         border-color: #d9d9d9
@@ -370,6 +387,8 @@
         background: url(/svgs/modal/close-x.svg) no-repeat 0 0
     .modal-header label
         color: white
+    #featured-project-modal label
+        margin-top: 8px
     .jqui-modal .ui-dialog-content
         padding: 16px
     .jqui-modal .ui-dialog-buttonpane
@@ -807,15 +826,26 @@
     .action-bar .inner .dropdown:hover
         height: 46px
         border-color: rgba(0, 0, 0, 0.1)
-        background-color: #fafafa
+        transition: border-color 0.5s ease
+        background: #fafafa url(https://mxmou.github.io/customize-scratch/assets/caret.svg) no-repeat right center
         color: text
         font-weight: normal
+    .action-bar .inner .dropdown:hover
+        background-image: url(https://mxmou.github.io/customize-scratch/assets/caret_hover.svg)
+    .action-bar .inner .dropdown:focus
+    .action-bar .inner .dropdown.open
+        background-image: url(https://mxmou.github.io/customize-scratch/assets/caret_hover.svg)
+        border-color: primary
     .action-bar .inner .dropdown .dropdown-toggle
         display: block
         height: 100%
         margin: 0
-        padding: 0 16px
+        padding: 0
+        padding-left: 16px
+        padding-right: 64px
         line-height: 46px
+    .action-bar .inner .dropdown .dropdown-toggle .caret
+        display: none
     .action-bar .inner .dropdown .dropdown-menu
         top: 44px
         border-color: inherit
