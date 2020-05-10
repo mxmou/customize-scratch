@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.7.1
+@version        1.7.2
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -405,15 +405,23 @@
         display: none
     #page-403 .box-head
         border: none
-        color: #f8aa36
         text-align: center
     #page-403 .box-content, #page-404 .box-content, #page-500 .box-content
         border: none
         background: transparent
+    #page-404 img
+        padding-top: 20px !important
     #page-404 .box-header, #page-500 .box-header
         background: transparent
     #page-404 .box-header h1
-        color: #f8aa36
+        margin-top: -4px
+        color: text
+        font-size: 40px
+        line-height: 1.7em
+    #page-404 .box-content p
+        margin: 1em 0
+        font-size: 16px
+        line-height: 1.5em
     #page-500 .box-header h1
     #page-500 p
     #page-500 a
