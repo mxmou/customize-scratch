@@ -1035,3 +1035,10 @@
         border-radius: 0 0 0 13px
         width: 0
         content: ""
+    #comments .highlighted
+        background:transparent
+    #comments .highlighted .info .content, #comments .highlighted .info > div:not(.name):not(.content):not([data-content=reply-form])
+        background: #fff791
+    #comments .highlighted .info .content::after
+        border-bottom-color:#fff791 !important
+        border-left-color:#fff791 !important
