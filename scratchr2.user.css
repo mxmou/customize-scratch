@@ -618,7 +618,7 @@
         color: text
     #comments .comment
         margin-left: 0
-    #comments-loading
+    #comments #comments-loading
         background-color: transparent
 
 @-moz-document regexp("https://scratch.mit.edu/studios/.*")
