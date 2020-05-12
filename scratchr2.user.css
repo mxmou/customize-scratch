@@ -619,7 +619,7 @@
     #comments .comment
         margin-left: 0
     #comments-loading
-        background-color: transparent !important
+        background-color: transparent
 
 @-moz-document regexp("https://scratch.mit.edu/studios/.*")
     /* Studios */
