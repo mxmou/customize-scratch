@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.7.8
+@version        1.7.9
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -1044,3 +1044,18 @@
         background: rgba(77, 151, 255, 0.1)
         box-shadow: 0 0 0 8px rgba(77, 151, 255, 0.1)
         border-radius: 8px
+
+@-moz-document regexp("https://scratch.mit.edu/projects/.*")
+    [class*="monitor_list-monitor"] .ReactVirtualized__Grid__innerScrollContainer
+        height: fit-content !important
+        display: grid
+        max-height: unset !important
+    [class*="monitor_list-monitor"] .ReactVirtualized__Grid__innerScrollContainer [class*="monitor_list-row"]
+        height: fit-content !important
+        position: static !important
+    [class*="monitor_list-monitor"] .ReactVirtualized__Grid__innerScrollContainer [class*="monitor_list-value"]
+        height: fit-content
+    [class*="monitor_list-monitor"] .ReactVirtualized__Grid.ReactVirtualized__List
+        height: 100% !important
+        position: static !important
+        overflow: auto !important
