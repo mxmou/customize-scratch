@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.0
+@version        1.8.1
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -498,6 +498,7 @@
     #brdfooter
         margin-top: 40px
         margin-bottom: 0
+        border-radius: 0
         border: none
     #brdfooter .box-content
         box-sizing: border-box
