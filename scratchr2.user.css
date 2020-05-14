@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.1
+@version        1.8.2
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -264,18 +264,65 @@
     #topnav ul.account-nav
         margin-left: 0
         margin-bottom: 0
-    #topnav ul.account-nav li
-    #topnav ul.account-nav li.join-scratch
-    #topnav ul.account-nav li:last-child
+    #topnav ul.account-nav > li
+    #topnav ul.account-nav > li.join-scratch
+    #topnav ul.account-nav > li:last-child
+        box-sizing: border-box
+        height: 50px
+        padding: 0
         border: none
+        font-size: 13.6px
+        line-height: 50px
+    #topnav ul.account-nav > li > a
+    #topnav ul.account-nav .sign-in .dropdown-toggle
+        padding: 13px 15px 4px 15px
+        display: block
+        height: 33px
+        line-height: 24px
+    #topnav ul.account-nav li.join-scratch
+    #topnav ul.account-nav > li > span
+        font-size: 13.6px
     #topnav ul.account-nav .sign-in .popover
+        margin-top: 40px
         background-color: primary
+        cursor: auto
     #topnav ul.account-nav .sign-in .popover .arrow::after
         border-bottom-color: primary
+    #login-dropdown .dropdown-menu
+        max-width: 1000px
+    #login-dropdown .popover-content
+        padding: 19px
+    #login-dropdown form
+        width: 200px
+    #topnav ul.account-nav .sign-in form label
+        padding-top: 5px
+        color: white
+        font-weight: bold
+        line-height: 24px
+    #topnav ul.account-nav .sign-in form input
+        width: calc(100% - 30px)
+        height: 36px
+        padding: 0 16px
+        border: 1px solid rgba(0, 0, 0, 0.1)
+    #login button
+        margin: 5px 0
+        margin-bottom: 6.4px
+        padding: 9.6px
+        height: auto
+        background: white
+        color: primary
+        line-height: 24px
+    #topnav ul.account-nav .sign-in form .forgot-password
+        float: right
+    #topnav ul.account-nav .sign-in form .forgot-password a
+        color: white
     #topnav ul.account-nav.logged-in > li
         border-left: none
         line-height: inherit
     #topnav ul.account-nav.logged-in > li:hover
+    #topnav ul.account-nav li.join-scratch:hover
+    #topnav ul.account-nav li.sign-in:hover
+    #topnav ul.account-nav li.sign-in.open
         background-color: rgba(0, 0, 0, 0.1)
     #topnav ul.account-nav .my-stuff .mystuff-icon
         background-image: url(/images/mystuff.png)
