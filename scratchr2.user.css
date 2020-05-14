@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.7.8
+@version        1.8.0
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -49,7 +49,7 @@
     .comment .comment-body .comment-bubble::before
         background: boxbg
 
-@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
+@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/.*/.+"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
     html
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
     body
@@ -748,6 +748,31 @@
     /* Studio Activity */
     .notification-feed
         padding: 0
+
+@-moz-document regexp("https://scratch.mit.edu/projects/.*/remixtree/")
+    #zoomContainer
+        height: 24px
+    .zoom
+        background: white
+        height: 24px
+    .zoom img
+        display: inline-block
+        width: 24px
+        height: 24px
+    .zoom:hover
+        margin: 0
+    #zoomOut
+        border-top-left-radius: 4px
+        border-bottom-left-radius: 4px
+    #zoomOut img
+        content: url(/static/assets/1fa6345d57ffc67eccd9f44cf6a383dd.svg)
+    #zoomEqual img
+        content: url(/static/assets/dba629c24296756d68a135988fe96011.svg)
+    #zoomIn
+        border-top-right-radius: 4px
+        border-bottom-right-radius: 4px
+    #zoomIn img
+        content: url(/static/assets/3cfc9b39a0d002246119d47f6756d77e.svg)
 
 @-moz-document url("https://scratch.mit.edu/mystuff/")
     /* My Stuff */
