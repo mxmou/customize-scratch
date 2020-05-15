@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.2
+@version        1.8.3
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -1117,3 +1117,19 @@
         background: rgba(77, 151, 255, 0.1)
         box-shadow: 0 0 0 8px rgba(77, 151, 255, 0.1)
         border-radius: 8px
+
+@-moz-document regexp("https://scratch.mit.edu/projects/.*")
+    .stats .project-remixes
+        position: relative
+    .stats .project-remixes:hover::after
+        content: "Want the remix tree back?\a Go to https://github.com/mxmou/customize-scratch"
+        white-space: pre
+        display: block
+        position: absolute
+        top: 48px
+        padding: 7px
+        border-radius: 5px
+        background: rgba(255, 191, 0, 0.25)
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
