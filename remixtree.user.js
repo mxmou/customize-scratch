@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Scratch Remix Tree
 // @namespace    github.com/mxmou
-// @version      1.0
+// @version      1.1
 // @description  Brings back the remix tree button
 // @author       MaxiMouse
 // @homepageURL  https://github.com/mxmou/customize-scratch
@@ -12,6 +12,7 @@
 
 (function() {
     'use strict';
+    document.documentElement.classList.add("remixtree-available");
 
     var remixTreeTestInterval = setInterval(function() {
         var remixes = document.querySelector(".stats .project-remixes");
