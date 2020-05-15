@@ -1121,7 +1121,7 @@
 @-moz-document regexp("https://scratch.mit.edu/projects/.*")
     .stats .project-remixes
         position: relative
-    .stats .project-remixes:hover::after
+    html:not(.remixtree-available) .stats .project-remixes:hover::after
         content: "Want the remix tree back?\a Go to https://github.com/mxmou/customize-scratch"
         white-space: pre
         display: block
