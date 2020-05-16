@@ -16,10 +16,6 @@ Shows the remix tree when you click the remix count on a project.
 
 ## The Scratch 2.0 theme
 
-Makes Scratch 3.0 more similar to Scratch 2.0. Currently in beta.
+Makes Scratch 3.0 more similar to Scratch 2.0. Not actively developed at the moment. Thanks to https://github.com/infinitytec/I-Cant-Believe-Its-Not-2 for inspiration.
 
 [Click to install](https://mxmou.github.io/customize-scratch/scratch2Theme.user.js)
-
-## Credits
-
-Thanks to https://github.com/infinitytec/I-Cant-Believe-Its-Not-2 for inspiration.
