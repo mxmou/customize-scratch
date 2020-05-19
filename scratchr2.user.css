@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.3
+@version        1.8.4
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -49,7 +49,7 @@
     .comment .comment-body .comment-bubble::before
         background: boxbg
 
-@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/.*/.+"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
+@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/[0-9]*/(remixes|studios)/"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
     html
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
     body
