@@ -10,7 +10,7 @@ Scratch 3.0 look and feel for old parts of the website (My Stuff, forums ...). Y
 
 ## Bring back the Discuss button
 
-Adds the Discuss button to the navigation bar. Original here: https://github.com/Kenny2github/kenny2github.github.io/blob/master/index/discuss.user.js
+Adds the Discuss button to the navigation bar. Original [here](https://github.com/Kenny2github/kenny2github.github.io/blob/master/index/discuss.user.js).
 
 I improved it quite a bit - now it's "instant" (there is no visible delay between the page load and the Discuss button appearing) and works on 3.0 project pages (the original from 2017 didn't).
 
@@ -24,6 +24,6 @@ Shows the remix tree when you click the remix count on a project.
 
 ## The Scratch 2.0 theme
 
-Makes Scratch 3.0 more similar to Scratch 2.0. Not actively developed at the moment. Thanks to https://github.com/infinitytec/I-Cant-Believe-Its-Not-2 for inspiration.
+Makes Scratch 3.0 more similar to Scratch 2.0. Not actively developed at the moment. Thanks to [infinitytec](https://github.com/infinitytec/I-Cant-Believe-Its-Not-2) for inspiration.
 
 [Click to install](https://mxmou.github.io/customize-scratch/scratch2Theme.user.js)
