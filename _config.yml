@@ -3,5 +3,5 @@ defaults:
   -
     scope:
       path: ""
-     values:
+    values:
       layout: "default"
