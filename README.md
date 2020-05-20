@@ -8,6 +8,14 @@ Scratch 3.0 look and feel for old parts of the website (My Stuff, forums ...). Y
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://mxmou.github.io/customize-scratch/scratchr2.user.css)
 
+## Bring back the Discuss button
+
+Adds the Discuss button to the navigation bar. Original here: https://github.com/Kenny2github/kenny2github.github.io/blob/master/index/discuss.user.js
+
+I improved it quite a bit - now it's "instant" (there is no visible delay between the page load and the Discuss button appearing) and works on 3.0 project pages (the original from 2017 didn't).
+
+[Click to install](https://mxmou.github.io/customize-scratch/bringItBack.user.js)
+
 ## Bring back the remix tree
 
 Shows the remix tree when you click the remix count on a project.
