@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.4
+@version        1.8.5
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -579,6 +579,26 @@
 @-moz-document regexp("https://scratch.mit.edu/discuss/topic/.*")
     #brdfooter .foot
         margin-top: 40px
+
+@-moz-document regexp("https://scratch.mit.edu/discuss/youtube/.*")
+    /* YouTube video player */
+    #content
+        width: 942px
+        margin-top: 20px
+    #content .box
+    #content .box .box-head
+    #content .box .box-content
+        border-radius: 0
+        border: none
+        background: transparent
+    #content > .cols > .col-10 > .box .box-head
+        display: none
+    #content > .cols > .col-10 > .box .box-content
+        padding: 0
+    .youtube-player
+        width: 100%
+    #content > .cols > .col-6 > .box .box-head
+        padding-top: 0
 
 @-moz-document regexp("https://scratch.mit.edu/users/[^/]+/(#.*)?")
     /* Profile page */
