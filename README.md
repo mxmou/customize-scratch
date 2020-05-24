@@ -8,6 +8,12 @@ Scratch 3.0 look and feel for old parts of the website (My Stuff, forums ...). Y
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://mxmou.github.io/customize-scratch/scratchr2.user.css)
 
+## Watch YouTube videos on Scratch in full screen
+
+When you click a link to a YouTube video on the Scratch forums, the full screen button is disabled. This userscript fixes that.
+
+[Click to install](https://mxmou.github.io/customize-scratch/scratchYtFs.user.js)
+
 ## Bring back the Discuss button
 
 Adds the Discuss button to the navigation bar. Original [here](https://github.com/Kenny2github/kenny2github.github.io/blob/master/index/discuss.user.js).
