@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Scratch Remix Tree
 // @namespace    github.com/mxmou
-// @version      1.1
+// @version      1.2
 // @description  Brings back the remix tree button
 // @author       MaxiMouse
 // @homepageURL  https://github.com/mxmou/customize-scratch
 // @supportURL   https://github.com/mxmou/customize-scratch/issues
 // @updateURL    https://mxmou.github.io/customize-scratch/remixtree.user.js
-// @match        https://scratch.mit.edu/projects/*/
+// @match        https://scratch.mit.edu/projects/*
 // ==/UserScript==
 
 (function() {
