@@ -277,9 +277,10 @@
     #topnav ul.account-nav .sign-in .dropdown-toggle
         padding: 13px 15px 4px 15px
         display: block
-        box-sizing: border-box
         height: 33px
         line-height: 24px
+    #topnav ul.account-nav .sign-in .dropdown-toggle
+        box-sizing: border-box
     #topnav ul.account-nav li.join-scratch
     #topnav ul.account-nav > li > span
         font-size: 13.6px
