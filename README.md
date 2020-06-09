@@ -1,10 +1,10 @@
 # Customize Scratch
 
-This repository contains userscripts and userstyles that can be used to customize the [Scratch 3.0](https://scratch.mit.edu/) website and editor. In Chrome, you can install scripts using [Tampermonkey](https://www.tampermonkey.net/).
+This repository contains userscripts and userstyles that can be used to customize the [Scratch 3.0](https://scratch.mit.edu/) website and editor. You can install scripts using [Tampermonkey](https://www.tampermonkey.net/).
 
 ## Scratch 3.0 look for old parts of the website
 
-Scratch 3.0 look and feel for old parts of the website (My Stuff, forums ...). You need a browser extension to install it, such as [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne). Some parameters are customizable.
+Scratch 3.0 look and feel for old parts of the website (My Stuff, forums ...). You need a browser extension to install it, such as Stylus ([Chrome](chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/)). Some parameters are customizable.
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://mxmou.github.io/customize-scratch/scratchr2.user.css)
 
