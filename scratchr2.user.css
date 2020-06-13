@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.8
+@version        1.8.9
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -786,12 +786,14 @@
         margin-top: 14px
         margin-left: 0
     .media-grid.projects .project.thumb.item
-        margin-right: 12px
+        margin-right: 13px
         margin-bottom: 12px
-        padding: 6px
+        padding: 8px
         border-radius: 4px
         background: boxbg
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
+    .media-grid.projects .project.thumb.item:nth-child(4n)
+        margin-right: 0
     .thumb img
         border: none
     /* Studio Comments */
