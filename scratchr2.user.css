@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.9
+@version        1.8.10
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -611,6 +611,26 @@
         width: 942px
         margin-left: auto
         margin-right: auto
+    .slider-carousel.horizontal .slider-carousel-control
+        width: 40px
+        height: 40px
+    .slider-carousel-control
+    .slider-carousel-control:hover
+    .slider-carousel .slider-carousel-control.off
+        opacity: 1
+        color: transparent
+        background-size: 70%
+        background-repeat: no-repeat
+        background-position: center center
+    .slider-carousel-control.arrow-left
+        background-image: url(/svgs/carousel/prev_ui-dark-gray.svg)
+    .slider-carousel-control.arrow-right
+        background-image: url(/svgs/carousel/next_ui-dark-gray.svg)
+    .slider-carousel .thumb span.title a
+        font-weight: bold /* instead of 800 */
+    .gallery.thumb span.image img
+        margin: 0
+    .gallery.thumb span.image
     #profile-data
     #profile-data .box-head
     #profile-box
