@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.10
+@version        1.8.11
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -127,8 +127,14 @@
     .button.grey:not([data-control=load-more]):hover, button.grey:hover
         color: active
         border-color: active
-    .button.small, button.smal
+    .button.small, button.small
         border-radius: 3px
+    .button[data-control=load-more]
+        display: block
+        position: static !important
+        width: 942px
+        margin: auto
+        text-align: center
     .dropdown span.dropdown-toggle:not(.black) span.caret
         width: 20px
         height: 20px
@@ -704,11 +710,15 @@
         padding: 0
         margin-bottom: 24px
     #comments #comment-form textarea
+        width: 875px
         height: 100px
-    #comments form .small-text
-        color: text
-    #comments .comment
-        margin-left: 0
+    #comments .comment form
+        margin-left: 1.5rem
+    #comments .comment form textarea
+        width: 855.5px
+        height: 100px
+    #comments .reply .comment form textarea
+        width: 785.5px
     #comments #comments-loading
         background-color: transparent
     #comments .more-replies
@@ -820,9 +830,20 @@
     #comments #comment-form
         padding-left: 0
         padding-right: 0
-    #comments .comment
-        margin-left: 0
-        margin-right: 0
+    #comments #comment-form textarea
+        width: 631px
+        height: 100px
+    #comments .comment form
+        margin-left: 1.5rem
+    #comments .comment form textarea
+        width: 611.5px
+        height: 100px
+    #comments .reply .comment form textarea
+        width: 541.5px
+    #comments .more-replies
+        background-color: bg
+    .button[data-control=load-more]
+        width: 698px
     /* Studio Curators */
     .tab-content h2
         margin-left: 0
@@ -986,12 +1007,6 @@
         border-radius: 4px
         background: boxbg
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
-    .button[data-control=load-more]
-        display: block
-        position: static !important
-        width: 942px
-        margin: auto
-        text-align: center
 
 @-moz-document url("https://scratch.mit.edu/accounts/settings/"), url("https://scratch.mit.edu/accounts/password_change/"), url("https://scratch.mit.edu/accounts/email_change/")
     /* Account Settings */
@@ -1115,6 +1130,11 @@
     
 @-moz-document regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/users/.*")
     /* Comments */
+    #comments form .small-text
+        color: text
+    #comments .comment
+        margin-left: 0
+        margin-right: 0
     #comments .comments li
     #comments ul.comments ul li
         /* Remove separators */
