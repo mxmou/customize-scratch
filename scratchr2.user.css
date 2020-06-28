@@ -1,53 +1,177 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        1.8.11
+@version        2.0.0
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
 @supportURL     https://github.com/mxmou/customize-scratch/issues
 @updateURL      https://mxmou.github.io/customize-scratch/scratchr2.user.css
 @license        MIT
-@var            color text    "Text color"                   #575e75
-@var            color primary "Primary color"                #4d97ff
-@var            color active  "Highlight color"              #4280d7
-@var            color bg      "Page background"              #fcfcfc
-@var            color boxbg   "Box background"               #ffffff
-@var            color boxhead "Box header/footer background" #f2f2f2
+@var            color    primary      "Primary color"               #4d97ff
+@var            checkbox lightprimary "Black text on primary color (experimental!)" 0
+@var            color    link         "Link color"                  #4d97ff
+@var            color    active       "Link hover color"            #4280d7
+@var            checkbox dark         "Dark mode (experimental!)"                   0
 @preprocessor   stylus
 ==/UserStyle== */
 
+/* TODO: sign in dropdown for lightprimary */
+
+if not dark
+    text = #575e75
+    bg = #fcfcfc
+    boxbg = #ffffff
+    boxhead = #f2f2f2
+else
+    text = white
+    bg = #202020
+    boxbg = #282828
+    boxhead = #333333
+
 @-moz-document regexp("https://scratch.mit.edu/.*")
-    /* Customized colors for 3.0-styled pages */
-    body
-    h1, h2, h3, h4, h5
-    p, .news li p
-    .outer .sort-mode .select select
-    .grid .thumbnail .thumbnail-info .thumbnail-title .thumbnail-creator a
-    .thumbnail-column .thumbnail .thumbnail-info .thumbnail-title .thumbnail-creator a
-    #footer, #donor
-        color: text
-    #view
-    .outer #projectBox
-    .tips-getting-started, .tips-activity-guides
-        background: bg
+    /* Customization for 3.0-styled pages */
     #navigation, #navigation .dropdown
         background: primary
+    if lightprimary
+        #navigation .link > a
+        #navigation .inner > ul > li.search .input[type=text]
+        .account-nav .user-info
+        #navigation .dropdown a:link
+        #navigation .dropdown a:visited
+        #navigation .dropdown a:active
+        #topnav ul.site-nav li a
+        #topnav ul.account-nav > li > span
+        #topnav ul.account-nav ul.user-nav li a
+        #topnav li.logout.divider input
+        .djangobb .new_topic
+        .follow-topic .follow-button:hover
+        .blockpost .box-head
+        .blockpost .box-head span.conr
+        .blockpost .box-head a
+        .blockpost .box-head a:link
+        .blockpost .box-head a:active
+        .blockpost .box-head a:hover
+        .blockpost .box-head a:visited
+            color: #575e75
+        #navigation .inner > ul > li.search .input[type=text]::placeholder
+            color: rgba(87, 94, 117, 0.75)
+        #navigation .inner > ul > li.search .btn-search
+        #navigation .messages > a
+        #navigation .mystuff > a
+        .account-nav .user-info::after
+        #topnav form.search .glass
+        #topnav ul.account-nav .messages .messages-icon
+        #topnav ul.account-nav .my-stuff .mystuff-icon
+        #topnav .dropdown .caret
+            filter: brightness(0.4)
     a, .news li h4
-        color: primary
+        color: link
     a:hover, .news li:hover h4
         color: active
-    .box .box-header, .gray-area, #footer, #donor
-        background: boxhead
-    .box, .box .box-content
-    .grid .thumbnail
-    .ttt-tile
-    .about .body
-    .messages-social-list
-    .comment-text
-    .comment .comment-body .comment-bubble
-    .comment .comment-body .comment-bubble::before
-        background: boxbg
+    if dark
+        body
+        h1, h2, h3, h4, h5
+        p, .news li p
+        a.social-messages-profile-link
+        .outer .sort-mode .select select
+        .grid .thumbnail .thumbnail-info .thumbnail-title .thumbnail-creator a
+        .thumbnail-column .thumbnail .thumbnail-info .thumbnail-title .thumbnail-creator a
+        #footer, #donor
+        .developers #faq p
+        .social-form
+        .join-flow-title
+            color: text
+        #view
+        .outer #projectBox
+        .tips-getting-started, .tips-activity-guides
+            background: bg
+        .box .box-header
+        .gray-area
+        #footer, #donor
+        .parents .title-banner.faq-banner
+        .developers .title-banner.faq-banner
+        .credits .supporters
+        .download .installation
+        .gender-radio-row
+            background: boxhead
+        .credits .logo-grid
+            /* Some logos don't look well on dark background */
+            background: #f7f6f8
+            color: #575e75
+        .box, .box .box-content
+        .tab-background
+        .outer .tab-background
+        .tabs
+        .tabs li:hover
+        .os-chooser
+        .modal-content
+        .grid .thumbnail
+        .ttt-tile
+        .about .body
+        .messages-social-list
+        .comment-text
+        .comment .comment-body .comment-bubble
+        .comment .comment-body .comment-bubble::before
+            background: boxbg
+        .comment-text::after
+            border-color: boxbg
+        .tabs li
+        .tabs li:hover
+        .tabs li.active:hover
+            color: text
+        .tabs li:hover
+            border-bottom-color: rgba(255, 255, 255, 0.2)
+        .outer .categories li
+            background-color: rgba(255, 255, 255, 0.1)
+        .outer .categories li:hover
+            background-color: rgba(255, 255, 255, 0.2)
+        .box
+        .box .box-header
+        .news li:nth-child(even)
+        input[type="checkbox"].formik-checkbox
+            border-color: #606060
+        .box .box-header
+            border-top-color: transparent
+        .inplace-input
+        .inplace-textarea
+        .textarea
+        .modal
+            background: boxbg
+            color: text
+        .textarea
+            border-color: #606060
+        .select select
+        .select select:hover
+        .select select:focus
+        .select select option
+        .select .join-flow-select
+            color: text
+            background-color: boxbg
+        .preview .guiPlayer
+        .gui
+        .react-contextmenu
+        .scratchCommentText
+            color: #575e75
+        img.tips-icon
+        .tabs li:not(.active) .tab-icon
+            filter: brightness(0) invert(1)
+        .stage-header_stage-header-wrapper-overlay_5vfJa
+            background: boxhead
+        .stage_stage-wrapper-overlay_fmZuD
+            background: boxbg
+        .intro-banner
+            background: transparent
+        .replies.collapsed > .comment:last-of-type::after
+            background: linear-gradient(rgba(37, 44, 55, 0), #252c37)
+        .studio-list-bottom-gradient
+            background: linear-gradient(rgba(40, 40, 40, 0), boxbg)
+        ::-webkit-scrollbar
+            background: boxhead
+        ::-webkit-scrollbar-thumb
+            background: #606060
+        ::-webkit-scrollbar-thumb:hover
+            background: #808080
 
 @-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/[0-9]*/(remixes|studios)/"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
     html
@@ -58,13 +182,18 @@
         background: bg
         color: text
         text-shadow: none
+    label
+        color: text
     h1, h2, h3, h4
         color: inherit
     a, input.link
     .ui-widget-content a
-        color: primary
+        color: link
         font-weight: bold
         text-decoration: none
+    a.black, a.black:visited
+    input.link.black
+        color: text
     a:hover
     a:active
     a.black:hover
@@ -82,7 +211,10 @@
     input, textarea
         box-shadow: none
         border-radius: 8px
-        border: 2px solid rgba(0, 0, 0, 0.2)
+        if not dark
+            border: 2px solid rgba(0, 0, 0, 0.2)
+        else
+            border: 2px solid rgba(255, 255, 255, 0.2)
         resize: none
     input:focus
         border-color: primary
@@ -104,13 +236,19 @@
         box-shadow: none
         font-family: inherit
         font-weight: bold
-        color: white
+        if not lightprimary
+            color: white
+        else
+            color: #575e75
         text-shadow: none
         cursor: pointer
     .button:not(.grey) a
     .button:not(.grey) a:hover
     .button:not(.grey) a:visited
-        color: white
+        if not lightprimary
+            color: white
+        else
+            color: #575e75
     .button.dropdown.open
     .button.small.dropdown.open
     button.dropdown.open
@@ -121,8 +259,8 @@
     button.grey
     .button.grey:not([data-control=load-more]):hover
     button.grey:hover
-        background: white
-        color: primary
+        background: boxbg
+        color: link
         border: 1px solid primary
     .button.grey:not([data-control=load-more]):hover, button.grey:hover
         color: active
@@ -168,14 +306,17 @@
         background: boxbg
         border-color: #d9d9d9
     .slider-carousel .thumb span.owner a
-        color: primary
+        color: link
+    .slider-carousel .thumb span.owner a:hover
+        color: active
     #comments .comments li
         border-color: #d9d9d9
     #comments .comment .info .name a:hover
-        color: primary
+        color: link
     #comments .comment .info .time
         color: #b3b3b3
     .dropdown .dropdown-menu
+        background-color: boxbg
         color: text
         font-weight: normal
         top: 24px
@@ -259,14 +400,20 @@
         border-radius: 5px
         font-family: inherit
         font-size: 13.6px
-        color: white
+        if not lightprimary
+            color: white
+        else
+            color: #575e75
         background: rgba(0, 0, 0, 0.1)
         box-shadow: none
         transition: background-color 0.15s ease
     #topnav form.search input[type=text]:focus
         background-color: rgba(0, 0, 0, 0.2)
     #topnav form.search input[type=text]::placeholder
-        color: rgba(255, 255, 255, 0.75)
+        if not lightprimary
+            color: rgba(255, 255, 255, 0.75)
+        else   
+            color: rgba(87, 94, 117, 0.75)
     #topnav ul.account-nav
         margin-left: 0
         margin-bottom: 0
@@ -423,7 +570,10 @@
         border-radius: 16px 16px 0 0
         background: primary
         box-shadow: inset 0 -1px 0 0 active
-        color: white
+        if not lightprimary
+            color: white
+        else
+            color: #575e75
     .modal .modal-header .close
     .jqui-modal .ui-widget-header .ui-dialog-titlebar-close
         width: 32px
@@ -441,7 +591,10 @@
     .jqui-modal .ui-widget-header .ui-dialog-titlebar-close .ui-icon-closethick
         background: url(/svgs/modal/close-x.svg) no-repeat 0 0
     .modal-header label
-        color: white
+        if not lightprimary
+            color: white
+        else
+            color: #575e75
     #featured-project-modal label
         margin-top: 8px
     .jqui-modal .ui-dialog-content
@@ -454,7 +607,7 @@
         background: rgba(77, 151, 255, 0.1)
     #featured-project-modal .project.thumb
         border: none
-        background: white
+        background: boxbg
     .modal-footer
         border-radius: 0 0 16px 16px
         border: none
@@ -463,7 +616,26 @@
     .modal-footer .btn:not(.blue)
         border: 1px solid rgba(0, 0, 0, 0.1)
         background: white
-        color: primary
+        color: link
+    if dark
+        .box
+        .box .box-content
+            border-color: #606060
+        .box .box-head
+            border-color: transparent
+        input, textarea, select
+        .editable.write, .editable:hover
+            background-color: boxbg
+            color: text
+        .ui-widget-content
+            color: text
+        .dropdown .dropdown-menu li:hover
+            background-color: #606060
+        .dropdown span.dropdown-toggle.black span.caret
+            border-top-color: white
+        .icon-xs.black
+        .icon-sm.black
+            filter: brightness(0) invert(1)
 
     /* Error pages */
     #page-403, #page-404, #page-500
@@ -572,6 +744,10 @@
         border-top-color: primary
     .blockpost .box-head a:hover
         text-decoration: underline
+    .blockpost .box-content
+    .postright
+    .postfootright
+        background-color: boxbg
     .postleft, .postfootleft
         background-color: boxhead
     .postright, .postfootright
@@ -583,6 +759,42 @@
     .djangobb > .postmsg /* Post preview */
         box-sizing: border-box
         padding: 8px
+    if dark
+        .djangobb td
+        .djangobb th
+        .djangobb blockquote
+        .markItUpPreviewFrame
+            border-color: #606060
+        .postright, .postfootright
+            box-shadow: inset 1px 0 #606060
+        .postleft, .postfootleft, .blockpost label
+            box-shadow: 1px 0 #606060
+        .djangobb blockquote
+            background: boxhead
+        .djangobb hr
+            background: #606060
+        .markItUpHeader > ul > li
+        .markItUpHeader > ul > .markItUpDropMenu
+            background-color: #e0e0e0
+            border-radius: 3px
+            margin-right: 4px
+            margin-bottom: 6px
+        .markItUpHeader > ul > .markItUpDropMenu
+            background-position: 20px center
+        .markItUpHeader > ul > .markItUpDropMenu > a
+            width: 24px
+            background-position: 3px center
+        .markItUpHeader > ul > .markItUpDropMenu > ul
+            top: 21px
+        .markItUpHeader > ul > li > a
+        .markItUp .browser-os-button a
+            background-position: center center
+        .markItUpHeader > ul > .markItUpSeparator
+            height: 22px
+            background-color: #606060
+            color: transparent
+        .markItUpHeader > ul > li:hover
+            background-color: white
 
 @-moz-document regexp("https://scratch.mit.edu/discuss/topic/.*")
     #brdfooter .foot
@@ -624,6 +836,7 @@
     .slider-carousel-control:hover
     .slider-carousel .slider-carousel-control.off
         opacity: 1
+        background-color: transparent
         color: transparent
         background-size: 70%
         background-repeat: no-repeat
@@ -683,6 +896,8 @@
         border-radius: 4px
         border: none
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
+    .activity-stream .actor a
+        color: text !important
     /* Profile Comments */
     #content > .box:not(#profile-data):not(.slider-carousel-container)
         border-radius: 0
@@ -722,7 +937,11 @@
     #comments #comments-loading
         background-color: transparent
     #comments .more-replies
-        background-color:#eaf1fc
+        if not dark
+            background-color: #eaf1fc
+        else
+            background-color: #252c37
+            box-shadow: 0 -25px 20px -10px black
 
 @-moz-document regexp("https://scratch.mit.edu/studios/.*")
     /* Studios */
@@ -771,7 +990,7 @@
     #tabs
         height: 30px
         margin-left: 0
-        background: white
+        background: boxbg
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.25)
         text-align: center
     #tabs li
@@ -784,11 +1003,15 @@
         box-sizing: border-box
         height: 30px
         border: none
+        color: text
     #tabs li.active a
     #tabs li.active:hover a
         border-bottom: 3px solid #0fbd8c
     #tabs li:hover a
-        border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+        if not dark
+            border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+        else
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2)
     .box .box-content .action-bar .inner
         border: none
         padding-left: 0
@@ -842,6 +1065,8 @@
         width: 541.5px
     #comments .more-replies
         background-color: bg
+        if dark
+            box-shadow: 0 -25px 20px -10px black
     .button[data-control=load-more]
         width: 698px
     /* Studio Curators */
@@ -910,7 +1135,7 @@
         border-radius: 0
         width: 100%
         border: none
-        background: white
+        background: boxbg
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.25)
     .v-tabs ul
         display: flex
@@ -928,7 +1153,10 @@
         color: text
         text-shadow: none
     .v-tabs li:hover
-        border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+        if not dark
+            border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+        else
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2)
         background: transparent
     .v-tabs li:hover a
         color: text
@@ -949,7 +1177,10 @@
         padding: 20px 0
     .box .box-head h2
         padding: 5px 0
-        color: white
+        if not lightprimary
+            color: white
+        else
+            color: #575e75
         font-size: 40px
         line-height: 1.7em
     .box .box-head .buttons
@@ -971,6 +1202,8 @@
         border-color: rgba(0, 0, 0, 0.1)
         transition: border-color 0.5s ease
         background: #fafafa url(https://mxmou.github.io/customize-scratch/assets/caret.svg) no-repeat right center
+        if dark
+            background-color: boxbg
         color: text
         font-weight: normal
     .action-bar .inner .dropdown:hover
@@ -1076,6 +1309,19 @@
         border: none
         background: transparent
 
+@-moz-document url("https://scratch.mit.edu/statistics/")
+    if dark
+        .box .box-content
+            /* Charts don't look well on dark background */
+            background: white
+            color: #575e75
+
+@-moz-document url("https://scratch.mit.edu/contact-us/")
+    if dark
+        .elements__AttachFiles-sc-1ku14sw-2 *
+        /* Fix the upload files button */
+            color: #575e75
+
 @-moz-document url("https://download.scratch.mit.edu/scratch2download/")
     html, body
         margin: 0
@@ -1144,13 +1390,16 @@
         width: calc(100% - 55px)
     #comments .comment .info .content
         position: relative
-        border: 1px solid #d9d9d9
+        if not dark
+            border: 1px solid #d9d9d9
+        else
+            border: 1px solid #606060
         border-bottom: none
         border-top-right-radius: 5px
         padding: 1rem
         margin-left: 1.5rem
         margin-bottom: 0
-        background-color: white
+        background-color: boxbg
         overflow: visible !important
     #comments .comment .info > div:not(.name):not(.content):not([data-content=reply-form])
         margin-left: 1.5rem
@@ -1158,16 +1407,19 @@
         padding-top: 0
         border-bottom-left-radius: 5px
         border-bottom-right-radius: 5px
-        border: 1px solid #d9d9d9
+        if not dark
+            border: 1px solid #d9d9d9
+        else
+            border: 1px solid #606060
         border-top: none
-        background-color: white
+        background-color: boxbg
     #comments .content:after
         display: block
         position: absolute
         top: 0
         left: -12px
-        border-bottom: 10px solid white
-        border-left: 12px solid white
+        border-bottom: 10px solid boxbg
+        border-left: 12px solid boxbg
         border-radius: 0 0 0 12px
         width: 0
         content: ""
@@ -1178,6 +1430,8 @@
         left: -13px
         border-bottom: 12px solid #d9d9d9
         border-left: 13px solid #d9d9d9
+        if dark
+            border-color: #606060
         border-radius: 0 0 0 13px
         width: 0
         content: ""
@@ -1185,6 +1439,8 @@
         background: rgba(77, 151, 255, 0.1)
         box-shadow: 0 0 0 8px rgba(77, 151, 255, 0.1)
         border-radius: 8px
+    #comments .comment .info .name a
+        color: text
 
 @-moz-document regexp("https://scratch.mit.edu/projects/.*")
     .stats .project-remixes
