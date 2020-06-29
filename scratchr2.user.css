@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.0.0
+@version        2.0.1
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -925,15 +925,17 @@ else
         padding: 0
         margin-bottom: 24px
     #comments #comment-form textarea
-        width: 875px
-        height: 100px
+        width: 857px
+        height: 80px
+        padding: 1rem
     #comments .comment form
         margin-left: 1.5rem
     #comments .comment form textarea
-        width: 855.5px
-        height: 100px
+        width: 837.5px
+        height: 80px
+        padding: 1rem
     #comments .reply .comment form textarea
-        width: 785.5px
+        width: 767.5px
     #comments #comments-loading
         background-color: transparent
     #comments .more-replies
