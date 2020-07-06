@@ -33,3 +33,7 @@ Shows the remix tree when you click the remix count on a project.
 Makes Scratch 3.0 more similar to Scratch 2.0. Not actively developed at the moment. Thanks to [infinitytec](https://github.com/infinitytec/I-Cant-Believe-Its-Not-2) for inspiration.
 
 [Click to install](https://mxmou.github.io/customize-scratch/scratch2Theme.user.js)
+
+# You might also be interested in this:
+
+[Exact count](https://github.com/mxmou/exactcount) is a JavaScript program that shows the exact number of projects in a Scratch studio, even if it's larger than 100. It is available on the web and as a userscript.
