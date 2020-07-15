@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.1.1
+@version        2.1.2
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -170,7 +170,7 @@ else
         ::-webkit-scrollbar-corner
             background: transparent
 
-@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/[0-9]*/(remixes|studios)/"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
+@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/[0-9]*/(remixes|studios)/"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), url("https://scratch.mit.edu/info/quotes/"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
     html
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
     body
@@ -1323,6 +1323,20 @@ else
             /* Charts don't look well on dark background */
             background: white
             color: #575e75
+
+@-moz-document url("https://scratch.mit.edu/info/quotes/")
+    .help .faq .box
+    .help .faq .box-content
+    .help .faq .box-content > div
+        border: none
+        background: transparent
+    .help .faq .box-content > div
+        margin: 0
+    .help .faq .box-content h4
+        font-size: 32px
+    if dark
+        .help span.quotes
+            color: #bbbbbb
 
 @-moz-document url("https://scratch.mit.edu/contact-us/")
     if dark
