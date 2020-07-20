@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.1.3
+@version        2.1.4
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -1634,6 +1634,8 @@ else
             filter: brightness(0) invert(1) drop-shadow(0px 0px 2px  hsla(0, 0%, 0%, 0.15)) !important
         .stage-header_stage-size-toggle-group_17LtK .stage-header_stage-button_hkl9B:not(.stage-header_stage-button-toggled-off_AJ8yG) .stage-header_stage-button-icon_3zzFK
             filter: none
+        .preview .guiPlayer .project-info-alert
+            background: rgba(0, 0, 0, 0.7)
         .selector_new-buttons_2qHDd::before
             background: linear-gradient(hsla(207, 24%, 10%, 0), hsla(207, 24%, 10%, 1))
         .blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-content
