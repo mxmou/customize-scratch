@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.1.4
+@version        2.1.5
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -1546,6 +1546,7 @@ else
         .backpack_backpack-header_6ltCS
         .backpack_backpack-item_hwqzQ > div
         .stage-header_stage-button_hkl9B
+        .stage-wrapper_stage-wrapper_2bejr.stage-wrapper_full-screen_2hjMb
         .sprite-info_sprite-info_3EyZh
         .input_input-form_l9eYg
         .input_input-form_1Y0wX /* paint editor */
