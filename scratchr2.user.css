@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.1.5
+@version        2.1.6
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -16,8 +16,6 @@
 @preprocessor   stylus
 ==/UserStyle== */
 
-/* TODO: sign in dropdown for lightprimary */
-
 if not dark
     text = #575e75
     bg = #fcfcfc
@@ -31,12 +29,15 @@ else
 
 @-moz-document regexp("https://scratch.mit.edu/.*")
     /* Customization for 3.0-styled pages */
-    #navigation, #navigation .dropdown
+    #navigation
+    #navigation .dropdown
+    #navigation .dropdown.with-arrow::before
         background: primary
     if lightprimary
         #navigation .link > a
         #navigation .inner > ul > li.search .input[type=text]
         .account-nav .user-info
+        .login
         #navigation .dropdown a:link
         #navigation .dropdown a:visited
         #navigation .dropdown a:active
