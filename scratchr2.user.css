@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.1.7
+@version        2.1.8
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -171,7 +171,7 @@ else
         ::-webkit-scrollbar-corner
             background: transparent
 
-@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/[0-9]*/(remixes|studios)/"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/info/.*"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
+@-moz-document regexp("https://scratch.mit.edu/discuss/.*"), url("https://scratch.mit.edu/mystuff/"), regexp("https://scratch.mit.edu/users/.*"), regexp("https://scratch.mit.edu/classes/.*"), regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/projects/[0-9]*/(remixes|studios)/"), regexp("https://scratch.mit.edu/accounts/.*"), url("https://scratch.mit.edu/statistics/"), regexp("https://scratch.mit.edu/info/.*"), regexp("https://scratch.mit.edu/cloudmonitor/.*"), url("https://scratch.mit.edu/403/"), url("https://scratch.mit.edu/404/"), url("https://scratch.mit.edu/500/")
     html
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
     body
@@ -828,7 +828,7 @@ else
     #content > .cols > .col-6 > .box .box-head
         padding-top: 0
 
-@-moz-document regexp("https://scratch.mit.edu/users/[^/]+/(#.*)?")
+@-moz-document regexp("https://scratch.mit.edu/users/[^/]+/(#.*)?"), regexp("https://scratch.mit.edu/classes/[^/]+/(#.*)?")
     /* Profile page */
     #content
         width: 100%
@@ -906,6 +906,10 @@ else
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
     .activity-stream .actor a
         color: text !important
+    .empty-field
+        background: #0d2f3f
+        border-color: #124954
+        color: white
     /* Profile Comments */
     #content > .box:not(#profile-data):not(.slider-carousel-container)
         border-radius: 0
@@ -944,8 +948,6 @@ else
         padding: 1rem
     #comments .reply .comment form textarea
         width: 767.5px
-    #comments #comments-loading
-        background-color: transparent
     #comments .more-replies
         if not dark
             background-color: #eaf1fc
@@ -1400,6 +1402,8 @@ else
     
 @-moz-document regexp("https://scratch.mit.edu/studios/.*"), regexp("https://scratch.mit.edu/users/.*")
     /* Comments */
+    #comments #comments-loading
+        background-color: transparent
     #comments form .small-text
         color: text
     #comments .comment
