@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.1.8
+@version        2.1.9
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -129,8 +129,29 @@ else
             background-color: rgba(255, 255, 255, 0.2)
         .box
         .box .box-header
+        .textarea
         .news li:nth-child(even)
+        .thumbnail .thumbnail-image img
+        .outer .sort-controls
+        .video-player
+        .about .body
+        .about .body img
+        .about .body iframe
+        .messages-social-list
+        .social-message
+        .comment-text
+        .comment-text::before
+        .compose-comment .textarea-row textarea:not(:focus)
+        .comment .comment-body .comment-bubble
+        .comment .comment-body .comment-bubble::before
         input[type="checkbox"].formik-checkbox
+        .developers #projects h3
+        .developers #principles h3
+        .developers #donate
+        .developers #donate h3
+        .developers #faq
+        .information-page .info-outer nav
+        .conf2020-panel
             border-color: #606060
         .box .box-header
             border-top-color: transparent
@@ -140,8 +161,6 @@ else
         .modal
             background: boxbg
             color: text
-        .textarea
-            border-color: #606060
         .select select
         .select select:hover
         .select select:focus
@@ -149,6 +168,8 @@ else
         .select .join-flow-select
             color: text
             background-color: boxbg
+        .social-message-icon
+            opacity: 0.5
         img.tips-icon
         .tabs li:not(.active) .tab-icon
             filter: brightness(0) invert(1)
@@ -158,6 +179,10 @@ else
             background: boxbg
         .intro-banner
             background: transparent
+        .comment .comment-body .comment-bubble.comment-bubble-reported
+        .comment .comment-body .comment-bubble.comment-bubble-reported::before
+            background: #371528
+            border-color: #660011
         .replies.collapsed > .comment:last-of-type::after
             background: linear-gradient(rgba(37, 44, 55, 0), #252c37)
         .studio-list-bottom-gradient
@@ -618,6 +643,7 @@ else
     if dark
         .box
         .box .box-content
+        .thumb img
             border-color: #606060
         .box .box-head
             border-color: transparent
@@ -954,6 +980,10 @@ else
         else
             background-color: #252c37
             box-shadow: 0 -25px 20px -10px black
+    if dark
+        .slider-carousel .thumb img
+        .gallery.thumb span.image img
+            border-color: #606060
 
 @-moz-document regexp("https://scratch.mit.edu/studios/.*")
     /* Studios */
@@ -990,6 +1020,8 @@ else
         background: transparent
     #gallery-cover-image
         width: 226px
+        if dark
+            border-color: #606060
     #description .viewport
         margin-right: 0
     #gallery > .col-12 > .box
@@ -1123,6 +1155,14 @@ else
         border-bottom-right-radius: 4px
     #zoomIn img
         content: url(/static/assets/3cfc9b39a0d002246119d47f6756d77e.svg)
+
+@-moz-document regexp("https://scratch.mit.edu/cloudmonitor/.*")
+    .table th
+    .table td
+        border-color: #606060
+    .table-striped tbody > tr:nth-child(odd) > td
+    .table-striped tbody > tr:nth-child(odd) > th
+        background: rgba(255, 255, 255, 0.05)
 
 @-moz-document url("https://scratch.mit.edu/mystuff/")
     /* My Stuff */
@@ -1288,7 +1328,10 @@ else
         margin: 0 !important
         border-radius: 0
         border: none
-        border-left: 1px solid #d9d9d9
+        if not dark
+            border-left: 1px solid #d9d9d9
+        else
+            border-left: 1px solid #606060
         background: transparent
     .v-tabs ul
         padding-top: 16px
@@ -1344,8 +1387,9 @@ else
 
 @-moz-document url("https://scratch.mit.edu/contact-us/")
     if dark
+        .elements__SearchTitle-sc-8yny41-3
+        .elements__ArticleContent-sc-1lq865d-7 *
         .elements__AttachFiles-sc-1ku14sw-2 *
-        /* Fix the upload files button */
             color: #575e75
 
 @-moz-document url("https://download.scratch.mit.edu/scratch2download/")
@@ -1591,6 +1635,8 @@ else
             color: rgba(255, 255, 255, 0.5)
         .scratchCommentText /* for collapsed comments */
             fill: text
+        .stage_stage_1fD7k
+            border-color: rgba(255, 255, 255, 0.15)
         .sprite-selector-item_sprite-info_-I0i_
         .stage-selector_header-title_33xCt
         .stage-selector_label_1MCfr
