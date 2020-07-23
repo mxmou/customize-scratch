@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Scratchr2
 @namespace      github.com/mxmou
-@version        2.1.9
+@version        2.1.10
 @description    Makes the Scratchr2 site look more like Scratch 3.0
 @author         Maximouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -932,10 +932,11 @@ else
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
     .activity-stream .actor a
         color: text !important
-    .empty-field
-        background: #0d2f3f
-        border-color: #124954
-        color: white
+    if dark
+        .empty-field
+            background: #0d2f3f
+            border-color: #124954
+            color: white
     /* Profile Comments */
     #content > .box:not(#profile-data):not(.slider-carousel-container)
         border-radius: 0
