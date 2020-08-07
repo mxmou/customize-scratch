@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           Load more scrolling fix
+@namespace      github.com/mxmou
+@version        1.0.0
+@description    Fixes Load more scrolling bug on Scratch Explore page: https://scratch.mit.edu/discuss/topic/429155/
+@author         MaxiMouse (https://scratch.mit.edu/users/Maximouse)
+@homepageURL    https://github.com/mxmou/customize-scratch
+@supportURL     https://github.com/mxmou/customize-scratch/issues
+@updateURL      https://mxmou.github.io/customize-scratch/loadmore.user.css
+@license        MIT
+==/UserStyle== */
+
+@-moz-document regexp("https://scratch.mit.edu/explore/.*") {
+    .outer #projectBox {
+        overflow-anchor: none;
+    }
+}
