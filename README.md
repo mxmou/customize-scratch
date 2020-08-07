@@ -2,6 +2,12 @@
 
 This repository contains userscripts and userstyles that can be used to customize the [Scratch 3.0](https://scratch.mit.edu/) website and editor. You can install scripts using [Tampermonkey](https://www.tampermonkey.net/).
 
+## Bug fix: "Load more" scrolling on the Explore page
+
+See [the bug report](https://scratch.mit.edu/discuss/topic/429155/).
+
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://mxmou.github.io/customize-scratch/loadmore.user.css)
+
 ## Scratch 3.0 look for old parts of the website
 
 Scratch 3.0 look and feel for old parts of the website (My Stuff, forums ...). You need a browser extension to install it, such as Stylus ([Chrome](chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/)). Some parameters are customizable.
