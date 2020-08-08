@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Load more scrolling fix
 @namespace      github.com/mxmou
-@version        1.0.0
-@description    Fixes Load more scrolling bug on Scratch Explore page: https://scratch.mit.edu/discuss/topic/429155/
+@version        1.1.0
+@description    Fixes Load more scrolling bug on Scratch: https://scratch.mit.edu/discuss/topic/429155/
 @author         MaxiMouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
 @supportURL     https://github.com/mxmou/customize-scratch/issues
@@ -10,8 +10,10 @@
 @license        MIT
 ==/UserStyle== */
 
-@-moz-document regexp("https://scratch.mit.edu/explore/.*") {
-    .outer #projectBox {
+@-moz-document domain("scratch.mit.edu") {
+    .outer #projectBox,
+    .messages-social,
+    .preview .comments-container {
         overflow-anchor: none;
     }
 }
