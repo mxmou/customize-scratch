@@ -4,7 +4,7 @@ This repository contains userscripts and userstyles that can be used to customiz
 
 ## Bug fix: "Load more" scrolling on the Explore page
 
-See [the bug report](https://scratch.mit.edu/discuss/topic/429155/).
+See [the bug report](https://scratch.mit.edu/discuss/topic/429155/). The bug is already fixed in the development branch of `scratch-www` so this will soon become unnecessary.
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://mxmou.github.io/customize-scratch/loadmore.user.css)
 
@@ -33,6 +33,12 @@ I improved it quite a bit - now it's "instant" (there is no visible delay betwee
 Shows the remix tree when you click the remix count on a project.
 
 [Click to install](https://mxmou.github.io/customize-scratch/remixtree.user.js)
+
+## Resizable comment inputs
+
+Makes it possible to resize comment inputs on projects vertically.
+
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://mxmou.github.io/customize-scratch/resizable.user.css)
 
 ## The Scratch 2.0 theme
 
