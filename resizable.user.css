@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Resizable comment input
 @namespace      github.com/mxmou
-@version        1.0.0
+@version        1.0.1
 @description    Makes Scratch's comment inputs vertically resizable
 @author         MaxiMouse (https://scratch.mit.edu/users/Maximouse)
 @homepageURL    https://github.com/mxmou/customize-scratch
@@ -12,7 +12,10 @@
 
 @-moz-document domain("scratch.mit.edu") {
     .compose-comment .textarea-row textarea,
-    #comments #comment-form textarea {
+    #comments #comment-form textarea,
+    #comments .comment form textarea {
         resize: vertical;
+        min-height: 32px;
+        max-height: 480px;
     }
 }
