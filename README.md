@@ -1,6 +1,6 @@
 # Customize Scratch
 
-This repository contains userscripts and userstyles that can be used to customize the [Scratch 3.0](https://scratch.mit.edu/) website and editor. You can install scripts using [Tampermonkey](https://www.tampermonkey.net/).
+This repository contains userscripts and userstyles that can be used to customize the [Scratch 3.0](https://scratch.mit.edu/) website and editor. You can install them using [Tampermonkey](https://www.tampermonkey.net/) and [Stylus](https://github.com/openstyles/stylus).
 
 ## Bug fix: "Load more" scrolling on the Explore page
 
