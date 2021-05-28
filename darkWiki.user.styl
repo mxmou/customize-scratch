@@ -1,0 +1,384 @@
+/* ==UserStyle==
+@name           "Experimental" Dark for Scratch Wiki
+@namespace      github.com/mxmou
+@version        0.1.0
+@description    A dark theme for the Scratch wiki
+@author         Maximouse (https://scratch.mit.edu/users/Maximouse)
+@homepageURL    https://github.com/mxmou/customize-scratch
+@supportURL     https://github.com/mxmou/customize-scratch/issues
+@updateURL      https://mxmou.github.io/customize-scratch/darkWiki.user.styl
+@license        MIT
+@preprocessor   stylus
+==/UserStyle== */
+
+page_background = #202020
+box_background = #282828
+box_head_background = #333333
+border_color = #606060
+light_gray_color = #808080
+
+@-moz-document domain("en.scratch-wiki.info")
+    #view
+        background-color: page_background
+    .wikilogo
+        margin-bottom: 20px
+        background-color: border_color
+        border-radius: 10px
+    p, h1, h2, h3, h4, h5
+        color: inherit
+    .box
+        background-color: box_background
+        border-color: border_color
+        color: white
+    .box .box-header
+        background-color: box_head_background
+        border-top-color: transparent
+        border-bottom-color: border_color
+        color: white
+    .right .box .box-content
+        background-color: box_background
+    ::-webkit-scrollbar
+        background-color: box_head_background
+    ::-webkit-scrollbar-thumb
+        background-color: border_color
+    ::-webkit-scrollbar-thumb:hover
+        background-color: light_gray_color
+    ::-webkit-scrollbar-corner
+        background: transparent
+    #content
+    #footer
+    .tocnumber
+    .navpopup
+    div.thumbinner
+    code
+    pre
+    .mw-code
+    table.navbox
+    .wikitable
+    .diff-context
+    textarea
+    #pagehistory li.selected
+    .wikiEditor-ui-toolbar .tabs span.tab a.current
+    .wikiEditor-ui-toolbar .tabs span.tab a.current:visited
+    .wikiEditor-ui-toolbar .group .tool-select .label
+    .editOptions
+    .ui-widget-content
+    .mw-ui-button
+    .mw-ui-button:hover
+    .mw-ui-button:active
+    .mw-ui-button.is-on
+    .mw-ui-button:focus
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active:focus
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button
+    .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button
+    .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover
+    .oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > input.oo-ui-buttonElement-button
+    .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active
+    .mw-ui-input
+    .oo-ui-textInputWidget .oo-ui-inputWidget-input
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover
+    .mw-widget-dateInputWidget-handle
+    .mw-widget-dateInputWidget-empty .mw-widget-dateInputWidget-handle
+    .oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget
+    .mw-rcfilters-ui-filterMenuHeaderWidget-title
+    .mw-rcfilters-ui-filterMenuSectionOptionWidget-header-title.oo-ui-labelElement-label
+    .mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-content-title
+    .mw-rcfilters-ui-itemMenuOptionWidget-label-title
+    .mw-rcfilters-ui-itemMenuOptionWidget-label-desc
+    .mw-rcfilters-ui-viewSwitchWidget label.oo-ui-labelWidget
+    .mw-widget-calendarWidget
+    .mw-widget-calendarWidget-day-heading
+    .mw-widget-calendarWidget-day
+    .oo-ui-popupWidget-popup
+    .mw-rcfilters-ui-datePopupWidget .mw-rcfilters-ui-valuePickerWidget-title
+    .oo-ui-tabOptionWidget
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled:hover
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled:active
+    .oo-ui-tagItemWidget.oo-ui-widget-enabled
+    .oo-ui-tagItemWidget.oo-ui-widget-enabled:hover
+    .mw-rcfilters-ui-tagItemWidget-popup-content
+    .oo-ui-labelWidget.oo-ui-inline-help
+    .search-types .current a
+        color: white
+    .navbox-group
+    #content [style*="background"]
+    .navpopup [style*="background"]
+    .oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button
+        color: black
+    #content [style*="background: transparent"]
+    .navpopup [style*="background: transparent"]
+        color: white
+    #feet
+    .client-js .mw-content-ltr .mw-editsection-bracket:first-of-type
+    .client-js .mw-content-rtl .mw-editsection-bracket:not(:first-of-type)
+    .client-js .mw-content-rtl .mw-editsection-bracket:first-of-type
+    .client-js .mw-content-ltr .mw-editsection-bracket:not(:first-of-type)
+    .mw-plusminus-null
+    .autocomment
+    .autocomment a
+    .autocomment a:visited
+    .results-info
+    .wikiEditor-ui-toolbar .group .label
+    .mw-rcfilters-ui-savedLinksListWidget-placeholder.oo-ui-optionWidget .oo-ui-labelElement-label
+    .mw-rcfilters-ui-filterMenuOptionWidget.oo-ui-flaggedElement-muted .mw-rcfilters-ui-itemMenuOptionWidget-label-title
+    .mw-rcfilters-ui-filterMenuOptionWidget.oo-ui-flaggedElement-muted .mw-rcfilters-ui-itemMenuOptionWidget-label-desc
+    .mw-widget-calendarWidget-day-additional
+        color: rgba(255, 255, 255, 0.5)
+    #content [style*="color: #4D4D4D"]:not([style*="background"]):not([style*="background"] *)
+        color: rgba(255, 255, 255, 0.5) !important
+    .toctogglelabel
+    .wikiEditor-ui-toolbar .tabs span.tab a
+        color: #4d97ff
+    .mw-plusminus-pos
+        color: #00cc00
+    a.new
+    #content a.new
+    .navpopup a.new
+    .mw-plusminus-neg
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button
+        color: #ff4040
+    a.stub
+    #content a.stub
+    .navpopup a.stub
+        color: #c73855
+    .magnify a
+    .wikiEditor-ui-toolbar .tabs span.tab a::before
+    .wikiEditor-ui-toolbar .group .tool-select .label::after
+    #mw-indicator-mw-helplink a
+    .oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon:not(.oo-ui-image-invert)
+    .oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator:not(.oo-ui-image-invert)
+    .oo-ui-buttonElement.oo-ui-widget-disabled > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon
+    .oo-ui-textInputWidget.oo-ui-widget-enabled > .oo-ui-iconElement-icon:not(.oo-ui-checkboxInputWidget-checkIcon)
+    .oo-ui-indicator-clear
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle .oo-ui-indicatorElement-indicator
+    .oo-ui-decoratedOptionWidget.oo-ui-widget-enabled .oo-ui-iconElement-icon:not(.oo-ui-checkboxInputWidget-checkIcon)
+    .oo-ui-fieldsetLayout.mw-collapsible .mw-collapsible-toggle .oo-ui-iconElement
+        filter: invert(1) hue-rotate(180deg)
+    .toc
+    #filetoc
+    #catlinks
+    .navpopup
+    div.thumbinner
+    html .thumbimage
+    #content code
+    #content pre
+    .mw-highlight
+    table.navbox
+    table.wikitable
+    table.wikitable th
+    table.wikitable td
+    .infobox
+    .diff-context
+    #mw-input-wpscratchwikiskin-header-color
+    textarea
+    .wikiEditor-ui .wikiEditor-ui-view
+    .wikiEditor-ui .wikiEditor-ui-top
+    .wikiEditor-ui-toolbar .group
+    .wikiEditor-ui-toolbar .sections .section
+    .editOptions
+    .ui-widget-content
+    .oo-ui-panelLayout-framed
+    .mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend
+    .mw-ui-button
+    .mw-ui-button:hover
+    .mw-ui-button:active
+    .mw-ui-button.is-on
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active:focus
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button
+    .oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button
+    .oo-ui-radioInputWidget [type='radio'] + span
+    .oo-ui-checkboxInputWidget [type='checkbox'] + span
+    .mw-ui-input
+    .mw-ui-input:hover
+    .oo-ui-textInputWidget .oo-ui-inputWidget-input
+    .oo-ui-dropdownWidget-handle
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover
+    .mw-widget-dateInputWidget-handle
+    .mw-widget-dateInputWidget.oo-ui-widget-enabled .mw-widget-dateInputWidget-handle:hover
+    .oo-ui-menuSelectWidget
+    .mw-widget-calendarWidget
+    .mw-rcfilters-ui-filterMenuHeaderWidget-header
+    .mw-prefs-tabs-wrapper.oo-ui-panelLayout-framed
+    .mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle
+    .mw-rcfilters-ui-watchlistTopSectionWidget-separator
+    .mw-rcfilters-ui-itemMenuOptionWidget:not(:last-child):not(.mw-rcfilters-ui-itemMenuOptionWidget-identifier-talk)
+    .mw-rcfilters-ui-menuSelectWidget-footer
+    .oo-ui-popupWidget-popup
+    .mw-rcfilters-ui-datePopupWidget
+    .oo-ui-tagItemWidget
+    .oo-ui-tagItemWidget.oo-ui-widget-enabled:hover
+    .mw-rcfilters-ui-filterTagMultiselectWidget-views-select-widget.oo-ui-widget
+    .mw-search-profile-tabs
+    #mw-searchoptions
+        border-color: border_color
+    #editpage-specialchars
+    #content [style*="border: 1px solid #d9d9d9"]
+    #content [style*="border:1px solid #d9d9d9"]
+    #content [style*="border:1px solid #E0E0E0"]
+    #content [style*="border: 1px solid #ccc"]
+    #content [style*="border:1px solid #ccc"]
+    #content [style*="border:1px solid #CCC"]
+    #content [style*="border: solid 1px #ccc"]
+    #content [style*="border:solid 1px #ccc"]
+    #content [style*="border-top:1px solid #CCC"]
+    #content [style*="border-bottom:1px solid #CCCCCC"]
+    #content [style*="border: 1px solid #aaa"]
+    #content [style*="border:1px solid #aaa"]
+    #content [style*="border-bottom:1px solid #aaa"]
+    #content [style*="border: 1px solid silver"]
+    #content [style*="border: solid 1px silver"]
+        border-color: border_color !important
+    #content [style*="border-bottom: 1px solid #d9d9d9"]
+    #content [style*="border-bottom:1px solid #d9d9d9"]
+        border-bottom-color: border_color !important
+    .oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor::before
+        border-top-color: border_color
+    #pagehistory li.selected
+        outline-color: border_color
+    #content [style*="box-shadow: 1px 2px 2px #ddd"]
+        box-shadow: 1px 2px 2px border_color !important
+    #content h1
+    #content h2
+        border-color: white
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected .oo-ui-labelElement-label
+        border-color: transparent
+    .navpopup
+    textarea
+    .ui-widget-content
+    .mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend
+    .oo-ui-radioInputWidget [type='radio'] + span
+    .oo-ui-checkboxInputWidget [type='checkbox'] + span
+    .mw-ui-input
+    .oo-ui-textInputWidget .oo-ui-inputWidget-input
+    .oo-ui-menuSelectWidget
+    .mw-widget-dateInputWidget-calendar
+    .oo-ui-popupWidget-popup
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget-selected:hover
+    .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagItemWidget.oo-ui-widget-enabled
+        background-color: box_background
+    #content [style*="background-color: #fff;"]
+    #content [style*="background-color:#FFF;"]
+    #content [style*="background-color: white"]
+    #content [style*="background:white"]
+        background-color: box_background !important
+        color: white
+    .navbox-title
+    .navbox-group
+        border-color: box_background
+    .oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor:after
+        border-top-color: box_background
+    .mw-ui-input
+        box-shadow: inset 0 0 0 1px box_background
+    @media only screen and (max-width: 981.4px)
+        #view .left
+            background-color: rgba(40, 40, 40, 0.9)
+        #view .left .wikilogo
+            margin-top: 20px
+    #footer
+    .toc
+    #filetoc
+    #catlinks
+    div.thumbinner
+    code
+    pre
+    .mw-code
+    .mw-highlight
+    table.navbox
+    table.wikitable
+    div.faqshortanswer
+    #pagehistory li.selected
+    .diff-context
+    .popup_history_row_even
+    .wikiEditor-ui-toolbar
+    .editOptions
+    .oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button
+    .oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted
+    .mw-rcfilters-ui-filterMenuHeaderWidget-header
+    .mw-rcfilters-ui-filterMenuSectionOptionWidget
+    .mw-rcfilters-ui-filterMenuOptionWidget.oo-ui-flaggedElement-muted:not(.oo-ui-optionWidget-selected)
+    .mw-rcfilters-ui-menuSelectWidget-footer
+    .oo-ui-tabSelectWidget-framed
+    .mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle
+    .mw-search-profile-tabs
+    #mw-searchoptions
+        background-color: box_head_background
+    #content [style*="background-color: #f2f2f2"]
+    #content [style*="background-color:#f2f2f2"]
+    #content [style*="background-color:#F9F9F9"]
+    #content [style*="background-color: #f9f9f9"]
+    #content [style*="background-color: #f7f7f7"]
+    #content [style*="background-color:#F7F7F7"]
+    #content [style*="background-color:#f7f7f7"]
+    #content [style*="background-color:#fafafa"]
+    #content [style*="background-color:rgba"][style*="0.04"]
+        background-color: box_head_background !important
+        color: white
+    #content [style*="background-color:#fafafa"][style*="color:black"]
+    #content [style*="background-color:#F9F9F9"][style*="color: black"]
+    #content [style*="background-color:#F7F7F7"][style*="color:#211922"]
+        color: white !important
+    #content .box-header[style*="background-color: #f2f2f2"]
+        border-top-color: box_head_background !important
+    #content [style*="background-color: #f9f9f9"][style*="linear-gradient"]
+        background-image: none !important
+    #mw-input-wpscratchwikiskin-header-color
+    .mw-ui-button
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button
+    .tool-button:hover
+    .tool.oo-ui-buttonElement-frameless.oo-ui-iconElement > .oo-ui-buttonElement-button:hover
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled:hover
+    .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled:active
+    .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover
+    .mw-widget-dateInputWidget-handle
+        background-color: border_color
+    #mw-input-wpscratchwikiskin-header-color:hover
+    #mw-input-wpscratchwikiskin-header-color:focus
+    .mw-ui-button:hover
+    .mw-ui-button:active
+    .mw-ui-button.is-on
+    .mw-ui-button:focus
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active:focus
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:hover
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle
+    .mw-widget-dateInputWidget.oo-ui-widget-enabled .mw-widget-dateInputWidget-handle:hover
+        background-color: light_gray_color
+    .oo-ui-dropdownInputWidget.oo-ui-widget-enabled
+    .oo-ui-dropdownInputWidget.oo-ui-widget-enabled:hover
+    .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined
+    .mw-prefs-buttons
+        background-color: transparent
+    .ui-widget-content
+        background-image: none
+    #content hr
+    #content p img
+        background-color: white
+    .oo-ui-menuOptionWidget.oo-ui-optionWidget-selected
+    .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .mw-rcfilters-ui-tagItemWidget-selected.oo-ui-tagItemWidget.oo-ui-widget-enabled
+        background-color: rgba(41,98,204,0.1)
+    table.wikitable th
+        background-color: #365896
+    .diff-deletedline .diffchange
+    del.popupDiff
+        background-color: #fab005
+    .diff-addedline .diffchange
+    ins.popupDiff
+        background-color: #0069cc
+    #content [style*="background-color:#FF9999"]
+        background-color: #990000 !important
+        color: white
+    #content [style*="background: yellow"]
+        background-color: #e5e600 !important
