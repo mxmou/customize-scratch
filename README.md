@@ -4,6 +4,12 @@ This repository contains userscripts and userstyles that can be used to customiz
 
 Most of these are also available as part of the [Scratch Addons](https://scratchaddons.com/) browser extension, which is the recommended way to use them.
 
+## Dark theme for the Scratch Wiki
+
+A dark theme for the (only English for now) Scratch Wiki. Work in progress.
+
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://mxmou.github.io/customize-scratch/darkWiki.user.styl)
+
 ## Scratch 3.0 look for old parts of the website
 
 Scratch 3.0 look and feel for old parts of the website (My Stuff, forums ...). You need a browser extension to install it, such as Stylus ([Chrome](chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/)). Some parameters are customizable.
